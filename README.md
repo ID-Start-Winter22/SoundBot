@@ -10,3 +10,5 @@ Ideen:
         Kochrezept-Bot                                                                                                                                    
         Geschenkideen-Bot                                                                                                                                 
         Haushalts-Bot                                                                                                                                     
+        Musik-Bot
+        
