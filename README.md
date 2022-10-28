@@ -6,7 +6,7 @@ Verweisen Sie für mehr Information auf die Wiki Seite
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Ideen:
-  Kochrezept-Bot
-  Geschenkideen-Bot
-  Haushalts-Bot
+Ideen:                                                                                                                                                    
+        Kochrezept-Bot                                                                                                                                    
+        Geschenkideen-Bot                                                                                                                                 
+        Haushalts-Bot                                                                                                                                     
