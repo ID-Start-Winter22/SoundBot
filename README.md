@@ -12,3 +12,4 @@ Ideen:
         Haushalts-Bot                                                                                                                                     
         Musik-Bot
         
+Pitch 04.11.2022 im Wiki
