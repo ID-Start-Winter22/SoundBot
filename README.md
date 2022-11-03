@@ -6,10 +6,7 @@ Verweisen Sie für mehr Information auf die Wiki Seite
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Ideen:                                                                                                                                                    
-        Kochrezept-Bot                                                                                                                                    
-        Geschenkideen-Bot                                                                                                                                 
-        Haushalts-Bot                                                                                                                                     
-        Musik-Bot
+Musik-Bot (Name noch zu entscheiden)
+- Ein Bot mit dem über Musik gesprochen werden kann und der einem hilft neue Künstler und Genres zu entdecken
         
 Pitch 04.11.2022 im Wiki
