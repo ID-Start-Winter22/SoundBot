@@ -11,4 +11,4 @@ Musik-Bot (Name noch zu entscheiden)
         
 Pitch 04.11.2022 im Wiki (https://github.com/ID-Start-Winter22/chat-team-9/wiki/Pitch-04.11.2022)
 
-User Research und Sprint 0 ()
+User Research und Sprint 0 (https://github.com/ID-Start-Winter22/chat-team-9/wiki/User-Research-und-Sprint-0)
