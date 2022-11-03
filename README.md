@@ -10,3 +10,5 @@ Musik-Bot (Name noch zu entscheiden)
 - Ein Bot mit dem über Musik gesprochen werden kann und der einem hilft neue Künstler und Genres zu entdecken
         
 Pitch 04.11.2022 im Wiki (https://github.com/ID-Start-Winter22/chat-team-9/wiki/Pitch-04.11.2022)
+
+User Research und Sprint 0 ()
