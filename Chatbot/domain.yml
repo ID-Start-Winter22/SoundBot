@@ -11,17 +11,19 @@ intents:
   - bot_challenge
   - my_name_is
   - bot_challenge_name
-  - ask_travel_time
+  - ask_for_song
   
 actions:
   - action_store_name
   - action_get_name
-  - action_get_travel_time
+  - action_get_similar_song
+  - action_get_similar_musician
 
 entities:
   - username
-  - from_station
-  - to_station
+  - song1
+  - song2
+  - song3
 
 slots:
   username:
@@ -30,13 +32,19 @@ slots:
     mappings:
     - type: from_entity
       entity: username
-  from_station:
+  song1:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: from_station
-  to_station:
+  song2:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: to_station
+  song3:
     type: text
     influence_conversation: true
     mappings:
@@ -48,16 +56,16 @@ responses:
   - text: "Hallo wie geht es Dir?"
   - text: "Servus, wie isses?"
   - text: "Hello there, wie geht's?"
+  - text: "Alles fit im Schritt?"
 
   utter_cheer_up:
-  - text: "Lass den Kopf nicht hängen. Schau mal:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Hilft das?"
+  - text: "Wie wärs mit ein paar Songs zum Aufheitern"
 
   utter_happy:
-  - text: "Toll weiter so."
+  - text: "Wunderbar! Ich hätte die hier für dich rausgesucht:"
+
+  utter_songlist:
+  - text: "{song1}, {song2}, {song3}"
 
   utter_goodbye:
   - text: "Bye"

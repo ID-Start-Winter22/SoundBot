@@ -14,7 +14,7 @@ from pyparsing import nestedExpr
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
-from . import mvg
+from . import spotify
 import json
 
 # NOTE(Michael): We could use this action to store the name in
@@ -50,15 +50,15 @@ class ActionUserName(Action):
 class ActionMVG(Action):
 
      def name(self) -> Text:
-         return "action_get_travel_time"
+         return "action_get_similar_song"
 
      def run(self, dispatcher, tracker, domain):
         from_station = tracker.get_slot("from_station")
         to_station = tracker.get_slot("to_station")
         if not from_station or not to_station :
-            dispatcher.utter_message("Diese Stationen habe ich nicht erkannt!")
+            dispatcher.utter_message("Diesen Song habe ich nicht erkannt")
         else:
-            result = json.loads(mvg.handle_route(from_station, to_station))
+            result = json.loads(spotify.handle_route(from_station, to_station))
             print(result)
             if "error" in result:
                 print("FEHLER!!!!!!!!!!!!")

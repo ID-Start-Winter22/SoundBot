@@ -8,25 +8,23 @@ stories:
   - intent: mood_great
   - action: utter_happy
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - intent: affirm
+#   - action: utter_happy
+#   - action: utter_songlist
 
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - intent: deny
 
 - story: greet_with_name
   steps:
@@ -49,7 +47,12 @@ stories:
   - intent: bot_challenge_name
   - action: action_get_name
 
-- story: Ask for travel time between two MVG stations
+- story: Ask for similar songs
   steps:
-  - intent: ask_travel_time
-  - action: action_get_travel_time
+  - intent: ask_for_song
+  - action: action_get_similar_song
+
+- story: Ask for similar musician
+  steps:
+  - intent: ask_for_musician
+  - action: action_get_similar_musician
