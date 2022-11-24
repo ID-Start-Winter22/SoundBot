@@ -129,12 +129,8 @@ nlu:
     - Wie heisse ich?
     - Erinnerst du dich an meinen Namen?
 
-- intent: ask_for_song
+- intent: ask_for_similar
   examples: |
-    - Gibts was Ähnliches zu [Beat It](song)?
-
-- intent: ask_for_musician
-  examples: |
-    - Gibts was Ähnliches zu [Michael Jackson](musician)?
+    - Gibts was Ähnliches zu [Michael Jackson](search)?
 
 

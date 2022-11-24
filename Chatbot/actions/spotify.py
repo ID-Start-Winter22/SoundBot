@@ -10,24 +10,71 @@
 import requests
 import json
 
-SPOTIFY_URL = "https://api.spotify.com/v1"
+SPOTIFY_SEARCH_URL = "https://api.spotify.com/v1/search?type=album&include_external=audio"
 # MVG_ROUTING_URL = "https://www.mvg.de/api/fahrinfo/routing"
 
-# def name_to_station(name: str):
-#     spotify_resp = requests.get(SPOTIFY_URL, params={"q": name})
+def name_to_artist(name: str, as_dict):
     
-#     if spotify_resp.status_code != requests.codes.ok:
-#         return None
+    #if spotify_resp.status_code != requests.codes.ok:
+    #    return None
+
+    # as_dict = {"artists": {"items": ["Metallica", "Michael Jackson"]}}
+
+    print(as_dict)
+
+    musician = None
+    try:
+        for art in range(len(as_dict["artists"]["items"])):
+            if name in as_dict["artists"]["items"][art]:
+                musician = as_dict["artists"]["items"][art]
+    except:
+        if "No token provided" in as_dict["error"]["message"]:
+            return "No token provided"
+
+    return musician
+
+#Test
+#print(name_to_artist("Michael Jackson"))
+
+def name_to_song(name: str, as_dict):
+
+    # as_dict = {"artists": {"items": ["Metallica", "Michael Jackson"]}}
+
+    print(as_dict)
+
+    song = None
+    try:
+        for track in range(len(as_dict["tracks"]["items"])):
+            if name in as_dict["tracks"]["items"][track]:
+                song = as_dict["tracks"]["items"][track]
+    except:
+        if "No token provided" in as_dict["error"]["message"]:
+            return "No token provided"
+
+    return song
+
+def search(name: str, as_dict):
+    #if spotify_resp.status_code != requests.codes.ok:
+    #    return None
     
-#     as_dict = spotify_resp.json()
+    # as_dict = {"tracks": {"href": "https://api.spotify.com/v1/me/shows?offset=0&limit=20", "items": []}, "artists": {"href": "https://api.spotify.com/v1/me/shows?offset=0&limit=20", "items": ["Metallica", "Michael Jackson"]}}
 
-#     musician = None
-#     for location in as_dict["locations"]:
-#         if location["type"] == "station":
-#             musician = { "id": location["id"], "name": location["name"] }
-#             break
+    loc_list = ["tracks", "artists", "albums"]
 
-#     return musician
+    for loc in range(len(as_dict)):
+        print(loc)
+        if name in as_dict[loc_list[loc]]["items"]:
+            state = str(as_dict[loc_list[loc]])
+            print(loc)
+            print(state)
+
+    # if state == str(as_dict["artists"]): print(1)
+
+    if state == str(as_dict["tracks"]): return name_to_song(name, as_dict)
+    elif state == str(as_dict["artists"]): return name_to_artist(name, as_dict)
+    else: return "Not Found"
+
+# print(search("Michael Jackson"))
 
 # # Returns travel time in minutes
 # def get_travel_time_for_stationIDs(station_a, station_b):
@@ -48,31 +95,42 @@ SPOTIFY_URL = "https://api.spotify.com/v1"
 
 #     return travel_time
 
-"""def get_similar_musician():"""
+def similar(name):
+    #spotify_resp = requests.get(SPOTIFY_SEARCH_URL, params={"q": name})
 
+    #as_dict = spotify_resp.json()
 
-# def handle_route(start, destination):
-#     from_station  = name_to_station(start)
-#     to_station    = name_to_station(destination)
+    as_dict = {"tracks": {"href": "https://api.spotify.com/v1/me/shows?offset=0&limit=20", "items": []}, "artists": {"href": "https://api.spotify.com/v1/me/shows?offset=0&limit=20", "items": ["Metallica", "Michael Jackson"]}}
 
-#     if from_station and to_station:
-#         print("Checking route from " + from_station["name"], from_station["id"] + " to " + to_station["name"], to_station["id"])
-#     else:
-#         error = "At least one unknown station!"
-#         return json.dumps({"error": error})
+    searched = search(name, as_dict)
+
+    if searched != "Not Found":
+        print("Checking for similarities to " + searched)
+    else:
+        return json.dumps({"error": searched})
+
+    if searched in as_dict["tracks"]: return "WIP"
+    elif searched in as_dict["artists"]:
+        #SPOTIFY_RELATED_ARTIST_URL = "https://api.spotify.com/v1/artists/" + name + "/related-artists"
+        #sim_art = requests.get(SPOTIFY_RELATED_ARTIST_URL, params={"q": name})
+        #sa_dict = sim_art.json()
+        sa_dict = {"artists": {"name": "Jackson 5"}}
+        return sa_dict["artists"]["name"]
+    else:
+        "No similarities found"
     
-#     travel_time = get_travel_time_for_stationIDs(from_station["id"], to_station["id"])
-#     if travel_time:
-#         result = {
-#             "from": from_station["name"],
-#             "to": to_station["name"],
-#             "time_needed": travel_time
-#         }
-#         return json.dumps(result)        
+    # travel_time = get_travel_time_for_stationIDs(from_station["id"], to_station["id"])
+    # if travel_time:
+    #     result = {
+    #         "from": from_station["name"],
+    #         "to": to_station["name"],
+    #         "time_needed": travel_time
+    #     }
+    #     return json.dumps(result)        
 
-#     else:
-#         return json.dumps({"error": "could not calculate travel time for those stations!"})
+    # else:
+    #     return json.dumps({"error": "could not calculate travel time for those stations!"})
 
-# # Test
-# # result = handle_route("Holzapfelkreuth", "Holzapfelkreuth")
-# # print(result)
+# Test
+# result = handle_route("Holzapfelkreuth", "Holzapfelkreuth")
+# print(result)

@@ -10,7 +10,6 @@ stories:
 
 # - story: sad path 1
 #   steps:
-#   - intent: greet
 #   - action: utter_greet
 #   - intent: mood_unhappy
 #   - action: utter_cheer_up
@@ -20,11 +19,10 @@ stories:
 
 # - story: sad path 2
 #   steps:
-#   - intent: greet
 #   - action: utter_greet
 #   - intent: mood_unhappy
-#   - action: utter_cheer_up
-#   - intent: deny
+# - action: utter_cheer_up
+# - intent: deny
 
 - story: greet_with_name
   steps:
@@ -47,12 +45,8 @@ stories:
   - intent: bot_challenge_name
   - action: action_get_name
 
-- story: Ask for similar songs
+- story: Ask for similar
   steps:
-  - intent: ask_for_song
-  - action: action_get_similar_song
-
-- story: Ask for similar musician
-  steps:
-  - intent: ask_for_musician
-  - action: action_get_similar_musician
+  - intent: ask_for_similar
+  - action: action_get_similar
+  - action: utter_songlist

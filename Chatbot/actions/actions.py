@@ -23,10 +23,10 @@ import json
 #                to identify the user by id eg. (user_id, slotvalue)
 class ActionStoreUserName(Action):
 
-     def name(self) -> Text:
-         return "action_store_name"
+    def name(self) -> Text:
+        return "action_store_name"
          
-     def run(self, dispatcher, tracker, domain):
+    def run(self, dispatcher, tracker, domain):
         username = tracker.get_slot("username")
         print("Sender ID: ", tracker.sender_id)
 
@@ -35,10 +35,10 @@ class ActionStoreUserName(Action):
 
 class ActionUserName(Action):
 
-     def name(self) -> Text:
-         return "action_get_name"
+    def name(self) -> Text:
+        return "action_get_name"
 
-     def run(self, dispatcher, tracker, domain):
+    def run(self, dispatcher, tracker, domain):
         username = tracker.get_slot("username")
         if not username :
             dispatcher.utter_message(" Du hast mir Deinen Namen nicht gesagt.")
@@ -47,27 +47,24 @@ class ActionUserName(Action):
 
         return []
 
-class ActionMVG(Action):
+class ActionSearch(Action):
 
-     def name(self) -> Text:
-         return "action_get_similar_song"
+    def name(self) -> Text:
+        return "action_get_similar"
 
-     def run(self, dispatcher, tracker, domain):
-        from_station = tracker.get_slot("from_station")
-        to_station = tracker.get_slot("to_station")
-        if not from_station or not to_station :
-            dispatcher.utter_message("Diesen Song habe ich nicht erkannt")
+    def run(self, dispatcher, tracker, domain):
+        search = tracker.get_slot("search")
+        if search == None:
+            dispatcher.utter_message("Das habe ich nicht erkannt")
         else:
-            result = json.loads(spotify.handle_route(from_station, to_station))
+            result = json.loads(spotify.similar(search))
             print(result)
             if "error" in result:
                 print("FEHLER!!!!!!!!!!!!")
-                dispatcher.utter_message("Sorry! Ich habe da mindestens eine Station nicht erkannt!")
+                dispatcher.utter_message("Sorry! Das habe ich nicht erkannt!")
             else:
-                origin = result["from"]
-                destination = result["to"]
-                time_needed = result["time_needed"]
-                dispatcher.utter_message("Du brauchst exakt: {} Minuten von {} nach {}. Gute Reise!".format(time_needed, origin, destination))
+                # dispatcher.utter_message("Du brauchst exakt: {} Minuten von {} nach {}. Gute Reise!".format(time_needed, origin, destination))
+                dispatcher.utter_message("{}".format(result))
 
         return []
 

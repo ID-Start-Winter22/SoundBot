@@ -11,19 +11,16 @@ intents:
   - bot_challenge
   - my_name_is
   - bot_challenge_name
-  - ask_for_song
+  - ask_for_similar
   
 actions:
   - action_store_name
   - action_get_name
-  - action_get_similar_song
-  - action_get_similar_musician
+  - action_get_similar
 
 entities:
   - username
-  - song1
-  - song2
-  - song3
+  - similar
 
 slots:
   username:
@@ -32,24 +29,12 @@ slots:
     mappings:
     - type: from_entity
       entity: username
-  song1:
+  similar:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: from_station
-  song2:
-    type: text
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: to_station
-  song3:
-    type: text
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: to_station
 
 responses:
   utter_greet:
@@ -65,7 +50,7 @@ responses:
   - text: "Wunderbar! Ich hätte die hier für dich rausgesucht:"
 
   utter_songlist:
-  - text: "{song1}, {song2}, {song3}"
+  - text: "{similar}"
 
   utter_goodbye:
   - text: "Bye"
