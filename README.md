@@ -6,9 +6,9 @@ Verweisen Sie für mehr Information auf die Wiki Seite (https://github.com/ID-St
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Musik-Bot (Name noch zu entscheiden)
+SoundBot
 - Ein Bot mit dem über Musik gesprochen werden kann und der einem hilft neue Künstler und Genres zu entdecken
         
-Sound Bot im Wiki (https://github.com/ID-Start-Winter22/chat-team-9/wiki/Sound-Bot)
+SoundBot im Wiki (https://github.com/ID-Start-Winter22/chat-team-9/wiki/Sound-Bot)
 
 User Research und Sprint 0 (https://github.com/ID-Start-Winter22/chat-team-9/wiki/User-Research-und-Sprint-0)
