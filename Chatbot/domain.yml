@@ -20,7 +20,7 @@ actions:
 
 entities:
   - username
-  - similar
+  - search
 
 slots:
   username:
@@ -29,12 +29,18 @@ slots:
     mappings:
     - type: from_entity
       entity: username
+  search:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: search
   similar:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
-      entity: from_station
+      entity: similar
 
 responses:
   utter_greet:

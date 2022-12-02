@@ -117,7 +117,7 @@ def similar(name):
         sa_dict = {"artists": {"name": "Jackson 5"}}
         return sa_dict["artists"]["name"]
     else:
-        "No similarities found"
+        return "No similarities found"
     
     # travel_time = get_travel_time_for_stationIDs(from_station["id"], to_station["id"])
     # if travel_time:
