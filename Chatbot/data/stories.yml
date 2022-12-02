@@ -49,4 +49,3 @@ stories:
   steps:
   - intent: ask_for_similar
   - action: action_get_similar
-  - action: utter_songlist

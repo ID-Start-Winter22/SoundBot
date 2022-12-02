@@ -57,7 +57,8 @@ class ActionSearch(Action):
         if search == None:
             dispatcher.utter_message("Das habe ich nicht erkannt")
         else:
-            result = json.loads(spotify.similar(search))
+            # result = json.loads(spotify.similar(search))
+            result = spotify.similar(search)
             print(result)
             if "error" in result:
                 print("FEHLER!!!!!!!!!!!!")

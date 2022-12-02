@@ -110,13 +110,15 @@ def similar(name):
         return json.dumps({"error": searched})
 
     if searched in as_dict["tracks"]: return "WIP"
-    elif searched in as_dict["artists"]:
+    elif searched in as_dict["artists"]["items"]:
         #SPOTIFY_RELATED_ARTIST_URL = "https://api.spotify.com/v1/artists/" + name + "/related-artists"
         #sim_art = requests.get(SPOTIFY_RELATED_ARTIST_URL, params={"q": name})
         #sa_dict = sim_art.json()
         sa_dict = {"artists": {"name": "Jackson 5"}}
+        print("118status: OK")
         return sa_dict["artists"]["name"]
     else:
+        print("status: No similarities")
         return "No similarities found"
     
     # travel_time = get_travel_time_for_stationIDs(from_station["id"], to_station["id"])
