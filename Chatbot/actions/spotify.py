@@ -1,17 +1,7 @@
-#########################################################
-#                                                       #
-# Query public transportation info from MVG.            #
-#                                                       #
-#                                                       #
-# Author: Michael Eggers, michael.eggers@hm.edu         #
-#########################################################
-
-
 import requests
 import json
 
 SPOTIFY_SEARCH_URL = "https://api.spotify.com/v1/search?type=album&include_external=audio"
-# MVG_ROUTING_URL = "https://www.mvg.de/api/fahrinfo/routing"
 
 def name_to_artist(name: str, as_dict):
     
@@ -37,8 +27,6 @@ def name_to_artist(name: str, as_dict):
 #print(name_to_artist("Michael Jackson"))
 
 def name_to_song(name: str, as_dict):
-
-    # as_dict = {"artists": {"items": ["Metallica", "Michael Jackson"]}}
 
     print(as_dict)
 
@@ -68,32 +56,12 @@ def search(name: str, as_dict):
             print(loc)
             print(state)
 
-    # if state == str(as_dict["artists"]): print(1)
-
     if state == str(as_dict["tracks"]): return name_to_song(name, as_dict)
     elif state == str(as_dict["artists"]): return name_to_artist(name, as_dict)
     else: return "Not Found"
 
+# Test
 # print(search("Michael Jackson"))
-
-# # Returns travel time in minutes
-# def get_travel_time_for_stationIDs(station_a, station_b):
-#     spotify_resp = requests.get(MVG_ROUTING_URL, params={ "fromStation": station_a, "toStation": station_b })
-
-#     if spotify_resp.status_code != requests.codes.ok:
-#         return None
-
-#     as_dict = spotify_resp.json()
-
-#     travel_time = None
-#     for connection in as_dict["connectionList"]:
-#         departure_time = connection["departure"]
-#         arrival_time   = connection["arrival"]
-#         delta_time_ms = arrival_time - departure_time
-#         travel_time   = (delta_time_ms / 1000.0) / 60.0
-#         break
-
-#     return travel_time
 
 def similar(name):
     #spotify_resp = requests.get(SPOTIFY_SEARCH_URL, params={"q": name})
@@ -120,18 +88,6 @@ def similar(name):
     else:
         print("status: No similarities")
         return "No similarities found"
-    
-    # travel_time = get_travel_time_for_stationIDs(from_station["id"], to_station["id"])
-    # if travel_time:
-    #     result = {
-    #         "from": from_station["name"],
-    #         "to": to_station["name"],
-    #         "time_needed": travel_time
-    #     }
-    #     return json.dumps(result)        
-
-    # else:
-    #     return json.dumps({"error": "could not calculate travel time for those stations!"})
 
 # Test
 # result = handle_route("Holzapfelkreuth", "Holzapfelkreuth")

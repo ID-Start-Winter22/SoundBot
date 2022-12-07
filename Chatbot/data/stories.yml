@@ -21,30 +21,23 @@ stories:
 #   steps:
 #   - action: utter_greet
 #   - intent: mood_unhappy
-# - action: utter_cheer_up
-# - intent: deny
+#   - action: utter_cheer_up
+#   - intent: deny
 
-- story: greet_with_name
+- story: Ask for background long
   steps:
-  - intent: greet_formal
-  - action: utter_greet_ask_name
-  - intent: my_name_is
-  - action: action_store_name
-  - action: utter_greet_with_name
+  - intent: ask_for_back
+  - action: utter_back_ask
+  - intent: long
+  - action: utter_back_long
 
-- story: greet_with_name2
+- story: Ask for background short
   steps:
-  - intent: greet
-  - action: action_store_name
-  - action: utter_greet_ask_name
-  - intent: my_name_is
-  - action: utter_greet_with_name
-
-- story: Ask the bot if it remembers user's name
-  steps:
-  - intent: bot_challenge_name
-  - action: action_get_name
-
+  - intent: ask_for_back
+  - action: utter_back_ask
+  - intent: short
+  - action: utter_back_short
+  
 - story: Ask for similar
   steps:
   - intent: ask_for_similar
