@@ -11,7 +11,7 @@ import json
 class ActionSearch(Action):
 
     def name(self) -> Text:
-        return "action_get_similar"
+        return "action_get_similar_artist"
 
     def run(self, dispatcher, tracker, domain):
         search = tracker.get_slot("search")
@@ -19,13 +19,13 @@ class ActionSearch(Action):
             dispatcher.utter_message("Das habe ich nicht erkannt")
         else:
             # result = json.loads(spotify.similar(search))
-            result = spotify.similar(search)
+            result = spotify.getRelatedArtist(search)
             print(result)
             if "error" in result:
                 print("FEHLER!!!!!!!!!!!!")
                 dispatcher.utter_message("Sorry! Das habe ich nicht erkannt!")
             else:
-                dispatcher.utter_message("Ich hätte das hier für dich gefunden: {}".format(result))
+                dispatcher.utter_message(f"Ich hätte das hier für dich gefunden: {result}")
 
         return []
 

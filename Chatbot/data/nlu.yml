@@ -67,10 +67,18 @@ nlu:
     - Die Kurze
     - kurz
 
-- intent: ask_for_similar
+- intent: ask
+  examples: |
+    - Zeig mir etwas Neues
+
+- intent: ask_for_similar_artist
   examples: |
     - Gibts was Ähnliches zu [Michael Jackson](search)?
     - Ähnliches zu [Michael Jackson](search)?
     -[Michael Jackson](search)
 
-
+# - intent: ask_for_similar_track
+#   examples: |
+#     - Gibts was Ähnliches zu [Beat It](search)?
+#     - Ähnliches zu [Beat It](search)?
+#     -[Beat It](search)

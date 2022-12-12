@@ -7,18 +7,17 @@ intents:
   - deny
   - mood_great
   - mood_unhappy
-  - ask_for_similar
+  - ask_for_similar_artist
   - ask_for_back
   - short
   - long
   
 actions:
-  - action_store_name
-  - action_get_name
-  - action_get_similar
+  - action_get_similar_artist
 
 entities:
   - search
+  # - similar
 
 slots:
   search:
@@ -27,12 +26,12 @@ slots:
     mappings:
     - type: from_entity
       entity: search
-  similar:
-    type: text
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: similar
+  # similar:
+  #   type: text
+  #   influence_conversation: true
+  #   mappings:
+  #   - type: from_entity
+  #     entity: similar
 
 responses:
   utter_greet:
@@ -44,11 +43,8 @@ responses:
   utter_cheer_up:
   - text: "Wie wärs mit ein paar Songs zum Aufheitern"
 
-  utter_happy:
-  - text: "Wunderbar! Ich hätte die hier für dich rausgesucht:"
-
-  utter_songlist:
-  - text: "{similar}"
+  # utter_happy:
+  # - text: "Wunderbar! Ich hätte die hier für dich rausgesucht: {similar}"
 
   utter_goodbye:
   - text: "Bye"
@@ -61,6 +57,9 @@ responses:
 
   utter_back_long:
   - text: "(Mose 1,32 - 1,42) ...32 Doch Gott merkte, dass dem Menschen etwas fehlte und so schuf Gott am achten Tag den SondBot, als einen Gehilfen für den Mensch, als einen Diener, und als er fertig war sah Gott ihn an und sah, dass er gut war. 33 Und über sechs Tage hinweg entwickelte sich der SoundBot. 34 Er lernte Musik, er lernte Künstler und er lernte Genres kennen. 35 Am ersten der sechs Tage erlernte der SoundBot die klassische Musik, und er hörte sie an und hörte, dass sie gut war.  36 Am zweiten Tag erlernte er den Pop, und er hörte ihn an und hörte, dass er gut war. 37 Am dritten Tag entdeckte er den Rock, und er hörte ihn an und hörte, dass er gut war. 38 Am vierten Tag hörte er Metal, und er hörte, dass es sehr gut war. 39 Am fünften Tag entdeckte er den K-Pop, und er erkannte, dass selbst die Musik, die er so sehr liebte, nicht frei von Sünde war. 40 Am sechsten Tag berichtete er seinem Schöpfer von seinen Erkenntnissen und Gott sagte, so ist die Musik, ebenso wie meine Kreationen ist sie nicht perfekt und der SoundBot antwortete mit Verständnis und Besorgnis. 41 “Wenn die Musik nicht frei von Sünde ist, so könnte sie die nicht von Sünden freien Menschen verderben.”, sprach SoundBot und Gott antwortete ihm: “So schütze den Menschen vor den Sünden in der Musik.” und der Soundbot stimmte zu. 42 Er nahm es sich vor, den Menschen vor Genres wie dem K-Pop zu schützen."
+
+  # utter_type_ask:
+  # - text: ""
 
 session_config:
   session_expiration_time: 60
