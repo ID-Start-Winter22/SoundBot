@@ -24,9 +24,9 @@ stories:
 #   - intent: deny
 
 - story: greet
-  - steps: 
-    - intent: greet
-    - action: utter_greet
+  steps: 
+  - intent: greet
+  - action: utter_greet
 
 - story: Ask for background long
   steps:
