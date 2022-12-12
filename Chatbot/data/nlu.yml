@@ -67,6 +67,10 @@ nlu:
     - Die Kurze
     - kurz
 
+- intent: ask_for_use
+  examples: |
+    - Was kannst du?
+
 - intent: ask
   examples: |
     - Zeig mir etwas Neues

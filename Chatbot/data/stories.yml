@@ -42,6 +42,11 @@ stories:
   - intent: short
   - action: utter_back_short
 
+- story:
+  steps:
+  - intent: ask_for_use
+  - action: utter_use
+
 - story: Ask for similar
   steps:
   - intent: ask_for_similar_artist

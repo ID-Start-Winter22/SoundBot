@@ -59,8 +59,12 @@ def getRelatedArtist(name):
     url = f"https://api.spotify.com/v1/artists/{id}/related-artists"
     headers = {"Authorization": "Bearer " + token}
 
-    res = requests.get(url=url, headers=headers).content
-    json_data = json.loads(res)
+    try:
+        res = requests.get(url=url, headers=headers).content
+        json_data = json.loads(res)
+    except:
+        return "error", "error", "error", "error", "error", "error"
+
     rel_art1 = chooseNew(json_data, alreadyRecommendedList)
     alreadyRecommendedList.append(rel_art1)
 
@@ -82,4 +86,5 @@ def getRelatedArtist(name):
     return rel_art1, rel_art2, rel_art3, rel_art4, rel_art5, rel_art6
 
 #Test
-print(getRelatedArtist("Michael Jackson"))
+#print(authToken())
+#print(getRelatedArtist("Michael Jackson"))
