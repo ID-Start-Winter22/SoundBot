@@ -14,36 +14,6 @@ nlu:
     - Auf wiedersehen
     - Bye
 
-- intent: affirm
-  examples: |
-    - j
-    - y
-    - ja
-    - jap
-    - yep
-    - genau
-    - korrekt
-
-- intent: deny
-  examples: |
-    - n
-    - nein
-    - ne
-    - nope
-
-- intent: mood_great
-  examples: |
-    - super
-    - gut
-    - toll
-
-- intent: mood_unhappy
-  examples: |
-    - schlecht
-    - nicht gut
-    - grauenvoll
-    - deprimiert
-
 - intent: ask_for_back
   examples: |
     - Wo kommst du her?
@@ -75,14 +45,32 @@ nlu:
   examples: |
     - Zeig mir etwas Neues
 
+- intent: type_artist
+  examples: |
+    - Artist
+    - Künstler
+    - Interpret
+    - Nach einem Artist
+    - Nach einem Künstler
+    - Nach einem Interpreten
+
+- intent: type_song
+  examples: |
+    - Track
+    - Song
+    - Nach einem Track
+    - Nach einem Song
+
 - intent: ask_for_similar_artist
   examples: |
     - Gibts was Ähnliches zu [Michael Jackson](search)?
-    - Ähnliches zu [Michael Jackson](search)?
-    -[Michael Jackson](search)
+    - Ähnliches zu [Lorna Shore](search)?
+    - [Metallica](search)
+    - [11111111111111111111](search)
+    - [ ](search)
 
-# - intent: ask_for_similar_track
-#   examples: |
-#     - Gibts was Ähnliches zu [Beat It](search)?
-#     - Ähnliches zu [Beat It](search)?
-#     -[Beat It](search)
+- intent: ask_for_similar_track
+  examples: |
+    - Gibts was Ähnliches zu [Beat It](search)?
+    - Ähnliches zu [Beat It](search)?
+    - [Beat It](search)
