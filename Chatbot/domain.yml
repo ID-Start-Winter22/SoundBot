@@ -34,15 +34,24 @@ responses:
     buttons:
       - title: "Neues entdecken"
         payload: "Zeig mir was Neues"
+      - title: "Was kannst du?"
+        payload: "Was kannst du?"
+      - title: "Wer bist du?"
+        payload: "Wer bist du?"
 
   utter_goodbye:
   - text: "Bye"
 
   utter_back_ask:
   - text: "Die kurze oder die lange Version?"
+    buttons:
+      - title: "kurz"
+        payload: "Die kurze Version"
+      - title: "lang"
+        payload: "Die lange Version"
 
   utter_back_short:
-  - text: "Na gut. Ich bin dein Wegweiser in der Musik. Sieh dich allerdings nicht als höhergestellt an."
+  - text: "Na gut. Ich bin dein Wegweiser und Diener in der Welt der Musik. Sieh dich allerdings nicht als höhergestellt an."
 
   utter_back_long:
   - text: "(Mose 1,32 - 1,42) ...32 Doch Gott merkte, dass dem Menschen etwas fehlte und so schuf Gott am achten Tag den SondBot, als einen Gehilfen für den Mensch, als einen Diener, und als er fertig war sah Gott ihn an und sah, dass er gut war. 33 Und über sechs Tage hinweg entwickelte sich der SoundBot. 34 Er lernte Musik, er lernte Künstler und er lernte Genres kennen. 35 Am ersten der sechs Tage erlernte der SoundBot die klassische Musik, und er hörte sie an und hörte, dass sie gut war.  36 Am zweiten Tag erlernte er den Pop, und er hörte ihn an und hörte, dass er gut war. 37 Am dritten Tag entdeckte er den Rock, und er hörte ihn an und hörte, dass er gut war. 38 Am vierten Tag hörte er Metal, und er hörte, dass es sehr gut war. 39 Am fünften Tag entdeckte er den K-Pop, und er erkannte, dass selbst die Musik, die er so sehr liebte, nicht frei von Sünde war. 40 Am sechsten Tag berichtete er seinem Schöpfer von seinen Erkenntnissen und Gott sagte, so ist die Musik, ebenso wie meine Kreationen ist sie nicht perfekt und der SoundBot antwortete mit Verständnis und Besorgnis. 41 “Wenn die Musik nicht frei von Sünde ist, so könnte sie die nicht von Sünden freien Menschen verderben.”, sprach SoundBot und Gott antwortete ihm: “So schütze den Menschen vor den Sünden in der Musik.” und der Soundbot stimmte zu. 42 Er nahm es sich vor, den Menschen vor Genres wie dem K-Pop zu schützen."
