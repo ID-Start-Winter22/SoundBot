@@ -67,7 +67,6 @@ nlu:
     - Ähnliches zu [Lorna Shore](search)?
     - [Metallica](search)
     - [11111111111111111111](search)
-    - [ ](search)
 
 - intent: ask_for_similar_track
   examples: |
