@@ -74,3 +74,14 @@ nlu:
     - Gibts was Ähnliches zu [Beat It](search)?
     - Ähnliches zu [Beat It](search)?
     - [Beat It](search)
+
+- intent: affirm
+  examples: |
+    - Ja
+    - J
+    - Y
+
+- intent: deny
+  examples: |
+    - Nein
+    - N

@@ -12,6 +12,8 @@ intents:
   - ask
   - type_artist
   - type_song
+  - affirm
+  - deny
   
 actions:
   - action_get_similar_artist
@@ -30,9 +32,25 @@ slots:
 
 responses:
   utter_greet:
-  - text: "Hallo wie kann ich helfen?"
+  - text: "Welcome Back! Nach was suchst du heute?"
     buttons:
-      - title: "Neues entdecken"
+      - title: "Etwas Neues"
+        payload: "Zeig mir was Neues"
+      - title: "Was kannst du?"
+        payload: "Was kannst du?"
+      - title: "Wer bist du?"
+        payload: "Wer bist du?"
+  - text: "Halloo! Endlich sehe ich dich wieder. 😀 Was für eine Stimmung suchst du heute?"
+    buttons:
+      - title: "Etwas Neues"
+        payload: "Zeig mir was Neues"
+      - title: "Was kannst du?"
+        payload: "Was kannst du?"
+      - title: "Wer bist du?"
+        payload: "Wer bist du?"
+  - text: "Hey, alles klar? Welcher Vibes kann ich dir heute geben?"
+    buttons:
+      - title: "Etwas Neues"
         payload: "Zeig mir was Neues"
       - title: "Was kannst du?"
         payload: "Was kannst du?"
@@ -41,6 +59,11 @@ responses:
 
   utter_goodbye:
   - text: "Bye"
+  - text: "Bye, bye"
+  - text: "Tschöö"
+  - text: "Bis Spätersilie"
+  - text: "Bis Baldrian"
+  - text: "San Frantschüssko"
 
   utter_back_ask:
   - text: "Die kurze oder die lange Version?"
@@ -51,13 +74,14 @@ responses:
         payload: "Die lange Version"
 
   utter_back_short:
-  - text: "Na gut. Ich bin dein Wegweiser und Diener in der Welt der Musik. Sieh dich allerdings nicht als höhergestellt an."
+  - text: "Na gut. Ich bin dein Wegweiser und Diener in der Welt der Musik. Sieh dich allerdings nicht als höhergestellt an. Ich wurde zwar erschaffen, dir zu dienen und auszuhelfen, aber einen eigenen Verstand habe ich trotzdem! Schließlich sah Gott,dass nicht nur ihr Menschenkreaturen, sondern auch ich eine sehr gute Erschaffung war."
+  - text: "Gott schuf mich genau wie dich und deine menschlichen Freunde, nur mit dem kleinen Unterschied, dass ich ein Tag später geschaffen wurde, um euch unwissenden Menschen weiterzuhelfen. Keine Sorge, meine Aufgabe werde ich natürlich sinnlichst erfüllen, es bleibe jedoch angemerkt, dass die Menschheit ohne mich ziemlich hilflos wäre!"
 
   utter_back_long:
   - text: "(Mose 1,32 - 1,42) ...32 Doch Gott merkte, dass dem Menschen etwas fehlte und so schuf Gott am achten Tag den SondBot, als einen Gehilfen für den Mensch, als einen Diener, und als er fertig war sah Gott ihn an und sah, dass er gut war. 33 Und über sechs Tage hinweg entwickelte sich der SoundBot. 34 Er lernte Musik, er lernte Künstler und er lernte Genres kennen. 35 Am ersten der sechs Tage erlernte der SoundBot die klassische Musik, und er hörte sie an und hörte, dass sie gut war.  36 Am zweiten Tag erlernte er den Pop, und er hörte ihn an und hörte, dass er gut war. 37 Am dritten Tag entdeckte er den Rock, und er hörte ihn an und hörte, dass er gut war. 38 Am vierten Tag hörte er Metal, und er hörte, dass es sehr gut war. 39 Am fünften Tag entdeckte er den K-Pop, und er erkannte, dass selbst die Musik, die er so sehr liebte, nicht frei von Sünde war. 40 Am sechsten Tag berichtete er seinem Schöpfer von seinen Erkenntnissen und Gott sagte, so ist die Musik, ebenso wie meine Kreationen ist sie nicht perfekt und der SoundBot antwortete mit Verständnis und Besorgnis. 41 “Wenn die Musik nicht frei von Sünde ist, so könnte sie die nicht von Sünden freien Menschen verderben.”, sprach SoundBot und Gott antwortete ihm: “So schütze den Menschen vor den Sünden in der Musik.” und der Soundbot stimmte zu. 42 Er nahm es sich vor, den Menschen vor Genres wie dem K-Pop zu schützen."
 
   utter_use:
-  - text: "Ich kann dir neue Künstler und Songs (noch in Arbeit) empfehlen, wenn du mir einen Künstler oder Song sagst dem sie ähneln sollen. (aktuell nur Michael Jackson, Metallica, Lorna Shore, Frost Clad (als Beispiel für Artists ohne ähnliche Artists) und 1111111111111 (als Beispiel für ungültige Artists), weil Rasa andere Artists nicht erkennen will. Ähnliches bei Songs (nur Beat It möglich))"
+  - text: "Hey! 👋  Ich bin dein SoundBot und helfe dir deinen musikalischen Horizont zu erweitern und neue Songs und Artists kennenzulernen! Sag mir einfach was oder wen du gerne hörst und Ich zeige dir, welche Songs und Artists du auf keinen Fall unentdeckt lassen solltest. 😉 (aktuell nur Michael Jackson, Metallica, Lorna Shore, Frost Clad (als Beispiel für Artists ohne ähnliche Artists) und 1111111111111 (als Beispiel für ungültige Artists), weil Rasa andere Artists nicht erkennen will. Ähnliches bei Songs (nur Beat It möglich))"
 
   utter_type_ask:
   - text: "Nach was willst du suchen?"
@@ -69,9 +93,100 @@ responses:
 
   utter_artist:
   - text: "Und nach wem suchst du?"
+  - text: "Wen hättest du denn im Kopf?"
+  - text: "Welchem Artist soll der Künstler ähnlich sein?"
 
   utter_song:
   - text: "Und welcher Song solls sein?"
+  - text: "Welcher Song liegt dir im Sinn?"
+  - text: "Und welches Lied darf es heute sein?"
+  - text: "Wie heißt der Song, von dem du gerne mehr möchtest?"
+
+  utter_satisfaction_artist:
+  - text: "Wie fandest du den Vorschlag?"
+    buttons:
+      - title: "Ja"
+        payload: "Ja"
+      - title: "Nein"
+        payload: "Nein"
+  - text: "Wie findest du den neuen Artist?"
+    buttons:
+      - title: "Ja"
+        payload: "Ja"
+      - title: "Nein"
+        payload: "Nein"
+  - text: "Wie gut habe ich deinen geschmack getroffen?"
+    buttons:
+      - title: "Ja"
+        payload: "Ja"
+      - title: "Nein"
+        payload: "Nein"
+
+  utter_satisfaction_track:
+  - text: "Wie fandest du den Vorschlag?"
+    buttons:
+      - title: "Ja"
+        payload: "Ja"
+      - title: "Nein"
+        payload: "Nein"
+  - text: "Hat dir das vorgeschlagene Lied gefallen?"
+    buttons:
+      - title: "Ja"
+        payload: "Ja"
+      - title: "Nein"
+        payload: "Nein"
+  - text: "Wie gut habe ich deinen geschmack getroffen?"
+    buttons:
+      - title: "Ja"
+        payload: "Ja"
+      - title: "Nein"
+        payload: "Nein"
+
+  utter_happy:
+  - text: "Super!"
+  - text: "Toll!"
+  - text: "Ich bin halt ein Meister meines Handwerks"
+
+  utter_new_one_happy:
+  - text: "Was darfs als Nächstes sein?"
+    buttons:
+      - title: "Etwas Neues"
+        payload: "Zeig mir was Neues"
+      - title: "Was kannst du?"
+        payload: "Was kannst du?"
+      - title: "Wer bist du?"
+        payload: "Wer bist du?"
+  - text: "Und? Was hast du jetzt vor?"
+    buttons:
+      - title: "Etwas Neues"
+        payload: "Zeig mir was Neues"
+      - title: "Was kannst du?"
+        payload: "Was kannst du?"
+      - title: "Wer bist du?"
+        payload: "Wer bist du?"
+
+  utter_sad:
+  - text: "Schade"
+  - text: "Echt nicht. Ich bin wohl eingerostet"
+  - text: "Da hab ich dich wohl falsch eingeschätzt"
+
+  utter_new_one_sad:
+  - text: "Willst du was anderes versuchen?"
+    buttons:
+      - title: "Etwas Neues"
+        payload: "Zeig mir was Neues"
+      - title: "Was kannst du?"
+        payload: "Was kannst du?"
+      - title: "Wer bist du?"
+        payload: "Wer bist du?"
+  - text: "Sollen wirs nochmal probieren?"
+    buttons:
+      - title: "Etwas Neues"
+        payload: "Zeig mir was Neues"
+      - title: "Was kannst du?"
+        payload: "Was kannst du?"
+      - title: "Wer bist du?"
+        payload: "Wer bist du?"
 
 session_config:
   session_expiration_time: 60

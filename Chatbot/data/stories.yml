@@ -24,11 +24,6 @@ stories:
   steps:
   - intent: ask_for_use
   - action: utter_use
-
-- story: Ask for similar
-  steps:
-  - intent: ask_for_similar_artist
-  - action: action_get_similar_artist
   
 - story: Ask for similar artist
   steps:
@@ -38,6 +33,7 @@ stories:
   - action: utter_artist
   - intent: ask_for_similar_artist
   - action: action_get_similar_artist
+  - action: utter_satisfaction_artist
 
 - story: Ask for similar track
   steps:
@@ -47,3 +43,16 @@ stories:
   - action: utter_song
   - intent: ask_for_similar_track
   - action: action_get_similar_track
+  - action: utter_satisfaction_track
+
+- story: satisfied
+  steps:
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_new_one_happy
+
+- story: not satisfied
+  steps:
+  - intent: deny
+  - action: utter_sad
+  - action: utter_new_one_sad

@@ -38,7 +38,7 @@ class ActionArtist(Action):
 
             if "error" in result1:
                 #Fehlermeldung, wenn Artist nicht existiert
-                dispatcher.utter_message("Den Artist kenn' ja nicht mal ich! Gib mal was anderes ein") 
+                dispatcher.utter_message("Wow! Nicht einmal ich kenne den Artist :o Versuche bitte einen anderen Namen.")
             elif "No similar" in result1:
                 #Fehlermeldung, wenn es nichts Ähnliches zur Suche gibt
                 dispatcher.utter_message("Ich kenne leider nichts ähnliches dazu") 
