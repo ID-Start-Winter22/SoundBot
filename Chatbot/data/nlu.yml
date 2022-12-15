@@ -66,6 +66,7 @@ nlu:
     - Gibts was Ähnliches zu [Michael Jackson](search)?
     - Ähnliches zu [Lorna Shore](search)?
     - [Metallica](search)
+    - [Frost Clad](search)
     - [11111111111111111111](search)
 
 - intent: ask_for_similar_track

@@ -3,6 +3,9 @@ import json
 import base64
 import random
 
+#Maximale Anzahl von Versuchen für das auswählen von Vorschlägen
+maxTries = 15
+
 def authToken():
     url = "https://accounts.spotify.com/api/token"
     clientId = "ccc7b42e5a2c4b5c876ebd93641bbce6"
@@ -33,7 +36,7 @@ def artistNameToId(name):
     json_data = json.loads(res)
     artists = json_data["artists"]
     try:
-        artId = artists["items"][1]["id"]
+        artId = artists["items"][0]["id"]
         return artId
     except:
         return "Not Found"
@@ -58,7 +61,7 @@ def chooseNewArt(json_data, aRL):
     while alreadyRec:
         rel_art = json_data["artists"][random.randint(0, len(json_data["artists"])-1)]["name"]
         alreadyRec = alreadyRecommended(aRL, rel_art)
-        if stop == 10:
+        if stop == maxTries:
             alreadyRec = False
             rel_art = ""
         stop += 1
@@ -107,5 +110,9 @@ def getRelatedArtist(name):
 
 #Tests
 #print(authToken())
+#print(artistNameToId("Michael Jackson"))
 #print(getRelatedArtist("Michael Jackson"))
+#print(getRelatedArtist("Metallica"))
+#print(getRelatedArtist("Lorna Shore"))
+#print(getRelatedArtist("Frost Clad"))
 #print(artistNameToId("1111111111111111"))
