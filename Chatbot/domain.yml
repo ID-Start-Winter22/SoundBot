@@ -32,7 +32,7 @@ slots:
 
 responses:
   utter_greet:
-  - text: "Welcome Back! Nach was suchst du heute?"
+  - text: "Welcome Back! Nach was suchst du?"
     buttons:
       - title: "Etwas Neues 🔎"
         payload: "Zeig mir was Neues"
@@ -40,7 +40,7 @@ responses:
         payload: "Was kannst du?"
       - title: "Wer bist du? 🤖"
         payload: "Wer bist du?"
-  - text: "Halloo! Endlich sehe ich dich wieder. 😀 Was für eine Stimmung suchst du heute?"
+  - text: "Halloo! Was suchst du heute?"
     buttons:
       - title: "Etwas Neues 🔎"
         payload: "Zeig mir was Neues"
@@ -48,7 +48,7 @@ responses:
         payload: "Was kannst du?"
       - title: "Wer bist du? 🤖"
         payload: "Wer bist du?"
-  - text: "Hey, alles klar? Welcher Vibes kann ich dir heute geben?"
+  - text: "Hey, alles klar? Was willst du tun?"
     buttons:
       - title: "Etwas Neues 🔎"
         payload: "Zeig mir was Neues"
@@ -92,8 +92,8 @@ responses:
         payload: "Song"
 
   utter_artist:
-  - text: "Und nach wem suchst du?"
-  - text: "Wen hättest du denn im Kopf?"
+  - text: "Welchen Artist hörst du aktuell gerne?"
+  - text: "Welcher Artist gefällt dir?"
   - text: "Welchem Artist soll der Künstler ähnlich sein?"
 
   utter_song:
@@ -148,7 +148,7 @@ responses:
   - text: "Ich bin halt ein Meister meines Handwerks 😎"
 
   utter_new_one_happy:
-  - text: "Was darfs als Nächstes sein?"
+  - text: "Was als Nächstes?"
     buttons:
       - title: "Etwas Neues 🔎"
         payload: "Zeig mir was Neues"
