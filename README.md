@@ -6,5 +6,5 @@ Der SoundBot ist ein Bot der dir hilft Inspiration zu finden, um deinen Musikali
 Wenn du mir einen Artist oder Song vorschlägst, der dir gefällt, kann ich dir Artists oder Songs liefern, die dir auch gefallen könnten. 
 Also lets goo…! 🤘
 
-mehr im Wiki (https://github.com/ID-Start-Winter22/SoundBot/wiki/Home/)
+Mehr zum SoundBot gibts im Wiki (https://github.com/ID-Start-Winter22/SoundBot/wiki/Home/)
 
