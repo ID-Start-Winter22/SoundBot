@@ -25,7 +25,7 @@ entities:
 slots:
   search:
     type: text
-    influence_conversation: true
+    influence_conversation: false
     mappings:
     - type: from_entity
       entity: search
