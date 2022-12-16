@@ -12,6 +12,7 @@ stories:
   - action: utter_back_ask
   - intent: long
   - action: utter_back_long
+  - action: utter_new_one_happy
 
 - story: Ask for background short
   steps:
@@ -19,11 +20,13 @@ stories:
   - action: utter_back_ask
   - intent: short
   - action: utter_back_short
+  - action: utter_new_one_happy
 
 - story:
   steps:
   - intent: ask_for_use
   - action: utter_use
+  - action: utter_new_one_happy
   
 - story: Ask for similar artist
   steps:
