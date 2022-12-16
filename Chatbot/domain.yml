@@ -34,43 +34,43 @@ responses:
   utter_greet:
   - text: "Welcome Back! Nach was suchst du heute?"
     buttons:
-      - title: "Etwas Neues"
+      - title: "Etwas Neues 🔎"
         payload: "Zeig mir was Neues"
-      - title: "Was kannst du?"
+      - title: "Was kannst du? 🛠️"
         payload: "Was kannst du?"
-      - title: "Wer bist du?"
+      - title: "Wer bist du? 🤖"
         payload: "Wer bist du?"
   - text: "Halloo! Endlich sehe ich dich wieder. 😀 Was für eine Stimmung suchst du heute?"
     buttons:
-      - title: "Etwas Neues"
+      - title: "Etwas Neues 🔎"
         payload: "Zeig mir was Neues"
-      - title: "Was kannst du?"
+      - title: "Was kannst du? 🛠️"
         payload: "Was kannst du?"
-      - title: "Wer bist du?"
+      - title: "Wer bist du? 🤖"
         payload: "Wer bist du?"
   - text: "Hey, alles klar? Welcher Vibes kann ich dir heute geben?"
     buttons:
-      - title: "Etwas Neues"
+      - title: "Etwas Neues 🔎"
         payload: "Zeig mir was Neues"
-      - title: "Was kannst du?"
+      - title: "Was kannst du? 🛠️"
         payload: "Was kannst du?"
-      - title: "Wer bist du?"
+      - title: "Wer bist du? 🤖"
         payload: "Wer bist du?"
 
   utter_goodbye:
-  - text: "Bye"
-  - text: "Bye, bye"
-  - text: "Tschöö"
-  - text: "Bis Spätersilie"
-  - text: "Bis Baldrian"
-  - text: "San Frantschüssko"
+  - text: "Bye 👋"
+  - text: "Bye, bye 👋"
+  - text: "Tschöö 👋"
+  - text: "Bis zum nächstes mal 👋"
+  - text: "Wir sehen uns 👋"
+  - text: "Bis Baldrian 👋"
 
   utter_back_ask:
   - text: "Die kurze oder die lange Version?"
     buttons:
-      - title: "kurz"
+      - title: "kurz..."
         payload: "Die kurze Version"
-      - title: "lang"
+      - title: "lang..."
         payload: "Die lange Version"
 
   utter_back_short:
@@ -78,7 +78,7 @@ responses:
   - text: "Gott schuf mich genau wie dich und deine menschlichen Freunde, nur mit dem kleinen Unterschied, dass ich ein Tag später geschaffen wurde, um euch unwissenden Menschen weiterzuhelfen. Keine Sorge, meine Aufgabe werde ich natürlich sinnlichst erfüllen, es bleibe jedoch angemerkt, dass die Menschheit ohne mich ziemlich hilflos wäre!"
 
   utter_back_long:
-  - text: "(Mose 1,32 - 1,42) ...32 Doch Gott merkte, dass dem Menschen etwas fehlte und so schuf Gott am achten Tag den SondBot, als einen Gehilfen für den Mensch, als einen Diener, und als er fertig war sah Gott ihn an und sah, dass er gut war. 33 Und über sechs Tage hinweg entwickelte sich der SoundBot. 34 Er lernte Musik, er lernte Künstler und er lernte Genres kennen. 35 Am ersten der sechs Tage erlernte der SoundBot die klassische Musik, und er hörte sie an und hörte, dass sie gut war.  36 Am zweiten Tag erlernte er den Pop, und er hörte ihn an und hörte, dass er gut war. 37 Am dritten Tag entdeckte er den Rock, und er hörte ihn an und hörte, dass er gut war. 38 Am vierten Tag hörte er Metal, und er hörte, dass es sehr gut war. 39 Am fünften Tag entdeckte er den K-Pop, und er erkannte, dass selbst die Musik, die er so sehr liebte, nicht frei von Sünde war. 40 Am sechsten Tag berichtete er seinem Schöpfer von seinen Erkenntnissen und Gott sagte, so ist die Musik, ebenso wie meine Kreationen ist sie nicht perfekt und der SoundBot antwortete mit Verständnis und Besorgnis. 41 “Wenn die Musik nicht frei von Sünde ist, so könnte sie die nicht von Sünden freien Menschen verderben.”, sprach SoundBot und Gott antwortete ihm: “So schütze den Menschen vor den Sünden in der Musik.” und der Soundbot stimmte zu. 42 Er nahm es sich vor, den Menschen vor Genres wie dem K-Pop zu schützen."
+  - text: "📔 (Mose 1,32 - 1,42) ...32 Doch Gott merkte, dass dem Menschen etwas fehlte und so schuf Gott am achten Tag den SondBot, als einen Gehilfen für den Mensch, als einen Diener, und als er fertig war sah Gott ihn an und sah, dass er gut war. 33 Und über sechs Tage hinweg entwickelte sich der SoundBot. 34 Er lernte Musik, er lernte Künstler und er lernte Genres kennen. 35 Am ersten der sechs Tage erlernte der SoundBot die klassische Musik, und er hörte sie an und hörte, dass sie gut war.  36 Am zweiten Tag erlernte er den Pop, und er hörte ihn an und hörte, dass er gut war. 37 Am dritten Tag entdeckte er den Rock, und er hörte ihn an und hörte, dass er gut war. 38 Am vierten Tag hörte er Metal, und er hörte, dass es sehr gut war. 39 Am fünften Tag entdeckte er den K-Pop, und er erkannte, dass selbst die Musik, die er so sehr liebte, nicht frei von Sünde war. 40 Am sechsten Tag berichtete er seinem Schöpfer von seinen Erkenntnissen und Gott sagte, so ist die Musik, ebenso wie meine Kreationen ist sie nicht perfekt und der SoundBot antwortete mit Verständnis und Besorgnis. 41 “Wenn die Musik nicht frei von Sünde ist, so könnte sie die nicht von Sünden freien Menschen verderben.”, sprach SoundBot und Gott antwortete ihm: “So schütze den Menschen vor den Sünden in der Musik.” und der Soundbot stimmte zu. 42 Er nahm es sich vor, den Menschen vor Genres wie dem K-Pop zu schützen."
 
   utter_use:
   - text: "Hey! 👋  Ich bin dein SoundBot und helfe dir deinen musikalischen Horizont zu erweitern und neue Songs und Artists kennenzulernen! Sag mir einfach was oder wen du gerne hörst und Ich zeige dir, welche Songs und Artists du auf keinen Fall unentdeckt lassen solltest. 😉 (aktuell nur Michael Jackson, Metallica, Lorna Shore, Frost Clad (als Beispiel für Artists ohne ähnliche Artists) und 1111111111111 (als Beispiel für ungültige Artists), weil Rasa andere Artists nicht erkennen will. Ähnliches bei Songs (nur Beat It möglich))"
@@ -86,9 +86,9 @@ responses:
   utter_type_ask:
   - text: "Nach was willst du suchen?"
     buttons:
-      - title: "Artist"
+      - title: "Artist 👤"
         payload: "Artist"
-      - title: "Song"
+      - title: "Song 🎶"
         payload: "Song"
 
   utter_artist:
@@ -105,87 +105,87 @@ responses:
   utter_satisfaction_artist:
   - text: "Wie fandest du den Vorschlag?"
     buttons:
-      - title: "Ja"
-        payload: "Ja"
-      - title: "Nein"
-        payload: "Nein"
+      - title: "Gut 👍"
+        payload: "Gut"
+      - title: "Schlecht 👎"
+        payload: "Schlecht"
   - text: "Wie findest du den neuen Artist?"
     buttons:
-      - title: "Ja"
-        payload: "Ja"
-      - title: "Nein"
-        payload: "Nein"
+      - title: "Gut 👍"
+        payload: "Gut"
+      - title: "Schlecht 👎"
+        payload: "Schlecht"
   - text: "Wie gut habe ich deinen geschmack getroffen?"
     buttons:
-      - title: "Ja"
-        payload: "Ja"
-      - title: "Nein"
-        payload: "Nein"
+      - title: "Gut 👍"
+        payload: "Gut"
+      - title: "Schlecht 👎"
+        payload: "Schlecht"
 
   utter_satisfaction_track:
   - text: "Wie fandest du den Vorschlag?"
     buttons:
-      - title: "Ja"
-        payload: "Ja"
-      - title: "Nein"
-        payload: "Nein"
+      - title: "Gut 👍"
+        payload: "Gut"
+      - title: "Schlecht 👎"
+        payload: "Schlecht"
   - text: "Hat dir das vorgeschlagene Lied gefallen?"
     buttons:
-      - title: "Ja"
-        payload: "Ja"
-      - title: "Nein"
-        payload: "Nein"
+      - title: "Gut 👍"
+        payload: "Gut"
+      - title: "Schlecht 👎"
+        payload: "Schlecht"
   - text: "Wie gut habe ich deinen geschmack getroffen?"
     buttons:
-      - title: "Ja"
-        payload: "Ja"
-      - title: "Nein"
-        payload: "Nein"
+      - title: "Gut 👍"
+        payload: "Gut"
+      - title: "Schlecht 👎"
+        payload: "Schlecht"
 
   utter_happy:
-  - text: "Super!"
-  - text: "Toll!"
-  - text: "Ich bin halt ein Meister meines Handwerks"
+  - text: "Super! 😁"
+  - text: "Toll! 😆"
+  - text: "Ich bin halt ein Meister meines Handwerks 😎"
 
   utter_new_one_happy:
   - text: "Was darfs als Nächstes sein?"
     buttons:
-      - title: "Etwas Neues"
+      - title: "Etwas Neues 🔎"
         payload: "Zeig mir was Neues"
-      - title: "Was kannst du?"
+      - title: "Was kannst du? 🛠️"
         payload: "Was kannst du?"
-      - title: "Wer bist du?"
+      - title: "Wer bist du? 🤖"
         payload: "Wer bist du?"
   - text: "Und? Was hast du jetzt vor?"
     buttons:
-      - title: "Etwas Neues"
+      - title: "Etwas Neues 🔎"
         payload: "Zeig mir was Neues"
-      - title: "Was kannst du?"
+      - title: "Was kannst du? 🛠️"
         payload: "Was kannst du?"
-      - title: "Wer bist du?"
+      - title: "Wer bist du? 🤖"
         payload: "Wer bist du?"
 
   utter_sad:
-  - text: "Schade"
+  - text: "Schade, sollen wir's nochmal versuchen? 😉"
   - text: "Echt nicht. Ich bin wohl eingerostet"
   - text: "Da hab ich dich wohl falsch eingeschätzt"
 
   utter_new_one_sad:
   - text: "Willst du was anderes versuchen?"
     buttons:
-      - title: "Etwas Neues"
+      - title: "Etwas Neues 🔎"
         payload: "Zeig mir was Neues"
-      - title: "Was kannst du?"
+      - title: "Was kannst du? 🛠️"
         payload: "Was kannst du?"
-      - title: "Wer bist du?"
+      - title: "Wer bist du? 🤖"
         payload: "Wer bist du?"
   - text: "Sollen wirs nochmal probieren?"
     buttons:
-      - title: "Etwas Neues"
+      - title: "Etwas Neues 🔎"
         payload: "Zeig mir was Neues"
-      - title: "Was kannst du?"
+      - title: "Was kannst du? 🛠️"
         payload: "Was kannst du?"
-      - title: "Wer bist du?"
+      - title: "Wer bist du? 🤖"
         payload: "Wer bist du?"
 
 session_config:

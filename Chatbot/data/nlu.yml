@@ -80,8 +80,10 @@ nlu:
     - Ja
     - J
     - Y
+    - Gut
 
 - intent: deny
   examples: |
     - Nein
     - N
+    - Schlecht
