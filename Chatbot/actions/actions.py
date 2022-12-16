@@ -33,7 +33,7 @@ class ActionArtist(Action):
             if result5 != "":
                 answer = f"Ich hätte die hier für dich gefunden: {result1}, {result2}, {result3}, {result4}, {result5}"
             if result6 != "":
-                answer = f"Ich hätte die hier für dich gefunden: {result1}, {result2}, {result3}, {result4}, {result5}, {result6}, {search}"
+                answer = f"Ich hätte die hier für dich gefunden: {result1}, {result2}, {result3}, {result4}, {result5}, {result6}"
             #--------------------------------------------
 
             if "error" in result1:
