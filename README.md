@@ -1,4 +1,5 @@
-![BANNER_NEW](https://user-images.githubusercontent.com/115628643/205302085-49ff6c23-cbee-4f25-b8be-52c9aac55179.png)
+![BANNER_new](https://user-images.githubusercontent.com/115628643/208204312-1413da37-012b-4a1a-8167-bee05f37a7e3.png)
+
 
 # SoundBot - dein persönlicher Musikassistent 🎸
 Der SoundBot ist ein Bot der dir hilft Inspiration zu finden, um deinen Musikalischen Horizont zu erweitern. 
