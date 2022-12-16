@@ -99,7 +99,7 @@ responses:
   utter_song:
   - text: "Welchen Song hörst du aktuell gerne?"
   - text: "Welcher Song gefällt dir?"
-  - text: "Gib mir einen Son der dir gefällt"
+  - text: "Gib mir einen Song der dir gefällt"
   - text: "Wie heißt der Song, von dem du gerne mehr möchtest?"
 
   utter_satisfaction_artist:
@@ -152,7 +152,7 @@ responses:
     buttons:
       - title: "Etwas Neues 🔎"
         payload: "Zeig mir was Neues"
-      - title: "Was kannst du? 🛠️"
+      - title: "Was kannst du? ⚙️"
         payload: "Was kannst du?"
       - title: "Wer bist du? 🤖"
         payload: "Wer bist du?"
