@@ -1,4 +1,5 @@
-![BANNER_new](https://user-images.githubusercontent.com/115628643/208204312-1413da37-012b-4a1a-8167-bee05f37a7e3.png)
+![bannerv2](https://user-images.githubusercontent.com/115628643/208231888-8307e966-2a68-4101-9b84-f53e6fc404f7.png)
+
 
 
 # SoundBot - dein Musikassistent 🎸
