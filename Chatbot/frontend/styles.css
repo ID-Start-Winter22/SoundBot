@@ -2,7 +2,7 @@
 .icon {
     position: absolute;
     top: 15px;
-    left: 10px;
+    left: 30px;
     width: 12%;
     height: auto;
     margin: 0px;
@@ -11,7 +11,7 @@
 .banner {
     position: absolute;
     top: 0px;
-    left: 130px;
+    left: 300px;
     width: 50%;
     height: auto;
     margin: 0px;
