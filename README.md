@@ -8,5 +8,5 @@ Wenn du mir einen Artist oder Song vorschlägst, der dir gefällt, kann ich dir 
 So kannst du dich ganz auf die Musik konzentrieren und der SoundBot übernimmt die Recherche.
 Also lets goo…! 🤘
 
-Wiki: https://github.com/ID-Start-Winter22/SoundBot/wiki
+### Wiki: https://github.com/ID-Start-Winter22/SoundBot/wiki
 
