@@ -5,6 +5,7 @@ import random
 
 #Maximale Anzahl von Versuchen für das auswählen von Vorschlägen
 maxTries = 15
+alreadyRecommendedList = []
 
 def authToken():
     url = "https://accounts.spotify.com/api/token"
@@ -69,8 +70,6 @@ def chooseNewArt(json_data, aRL):
     return rel_art
 
 def getRelatedArtist(name):
-    alreadyRecommendedList = []
-
     token = authToken()
     id = artistNameToId(name)
     if id == "Not Found":

@@ -84,3 +84,14 @@
 # res = requests.get(url=searchUrl, headers=headers)
 
 # print(json.dumps(res.json(), indent=2))
+
+#////////////////////////////////////////////////////////////////////
+
+search = 'Ich suche "Michael Jackson, oder so", Ok'
+start = str(search).find('"')
+end = str(search).find('"', start+1)
+search = str(search)[start:end].strip('"')
+
+print(start)
+print(end)
+print(search)

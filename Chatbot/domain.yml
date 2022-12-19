@@ -24,8 +24,8 @@ entities:
 
 slots:
   search:
-    type: text
-    influence_conversation: true
+    type: any
+    influence_conversation: false
     mappings:
     - type: from_entity
       entity: search
@@ -91,16 +91,16 @@ responses:
         payload: "Song"
 
   utter_artist:
-  - text: "Welchen Artist hörst du aktuell gerne?"
-  - text: "Welcher Artist gefällt dir?"
-  - text: "Gib mir einen Artist der dir gefällt"
-  - text: "Welchem Artist soll der Künstler ähnlich sein?"
+  - text: 'Welchen Artist hörst du aktuell gerne? (Schreib deine Suche am besten in "")'
+  - text: 'Welcher Artist gefällt dir? (Schreib deine Suche am besten in "")'
+  - text: 'Gib mir einen Artist der dir gefällt (Schreib deine Suche am besten in "")'
+  - text: 'Welchem Artist soll der Künstler ähnlich sein? (Schreib deine Suche am besten in "")'
 
   utter_song:
-  - text: "Welchen Song hörst du aktuell gerne?"
-  - text: "Welcher Song gefällt dir?"
-  - text: "Gib mir einen Son der dir gefällt"
-  - text: "Wie heißt der Song, von dem du gerne mehr möchtest?"
+  - text: 'Welchen Song hörst du aktuell gerne? (Schreib deine Suche am besten in "")'
+  - text: 'Welcher Song gefällt dir? (Schreib deine Suche am besten in "")'
+  - text: 'Gib mir einen Son der dir gefällt (Schreib deine Suche am besten in "")'
+  - text: 'Wie heißt der Song, von dem du gerne mehr möchtest? (Schreib deine Suche am besten in "")'
 
   utter_satisfaction_artist:
   - text: "Wie fandest du den Vorschlag?"
