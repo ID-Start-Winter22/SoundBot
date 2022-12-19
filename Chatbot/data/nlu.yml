@@ -1,6 +1,31 @@
 version: "3.0"
 
 nlu:
+- regex: search
+  examples: |
+    - "[a-zA-Z0-9]{1,100}"
+    - "[a-zA-Z0-9]{1,100} [a-zA-Z0-9]{1,100}"
+    - "[a-zA-Z0-9]{1,100} [a-zA-Z0-9]{1,100} [a-zA-Z0-9]{1,100}"
+    - "[a-zA-Z0-9]{1,100} [a-zA-Z0-9]{1,100} [a-zA-Z0-9]{1,100} [a-zA-Z0-9]{1,100}"
+    - "[a-zA-Z0-9]{1,100} [a-zA-Z0-9]{1,100} [a-zA-Z0-9]{1,100} [a-zA-Z0-9]{1,100} [a-zA-Z0-9]{1,100}"
+    - "[a-zA-Z0-9]{1,100} [a-zA-Z0-9]{1,100} [a-zA-Z0-9]{1,100} [a-zA-Z0-9]{1,100} [a-zA-Z0-9]{1,100} [a-zA-Z0-9]{1,100}"
+
+- intent: ask_for_similar_artist
+  examples: |
+    - Gibts was Ähnliches zu ["Michael Jackson"](search)?
+    - Ähnliches zu ["Lorna Shore"](search)?
+    - ["Metallica"](search)
+    - ["Frost Clad"](search)
+    - ["111111111111111111"](search)
+    - ["a-zA-Z0-9"](search)
+    - [""](search)
+
+- intent: ask_for_similar_track
+  examples: |
+    - Gibts was Ähnliches zu [Beat It](search)?
+    - Ähnliches zu [Beat It](search)?
+    - [Beat It](search)
+
 - intent: greet
   examples: |
     - guten Tag
@@ -40,10 +65,12 @@ nlu:
 - intent: ask_for_use
   examples: |
     - Was kannst du?
+    - Was sind deine Aufgaben?
 
 - intent: ask
   examples: |
     - Zeig mir etwas Neues
+    - Was Neues
 
 - intent: type_artist
   examples: |
@@ -60,20 +87,6 @@ nlu:
     - Song
     - Nach einem Track
     - Nach einem Song
-
-- intent: ask_for_similar_artist
-  examples: |
-    - Gibts was Ähnliches zu [Michael Jackson](search)?
-    - Ähnliches zu [Lorna Shore](search)?
-    - [Metallica](search)
-    - [Frost Clad](search)
-    - [111111111111111111](search)
-
-- intent: ask_for_similar_track
-  examples: |
-    - Gibts was Ähnliches zu [Beat It](search)?
-    - Ähnliches zu [Beat It](search)?
-    - [Beat It](search)
 
 - intent: affirm
   examples: |

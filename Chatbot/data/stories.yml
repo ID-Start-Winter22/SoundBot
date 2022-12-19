@@ -22,7 +22,7 @@ stories:
   - action: utter_back_short
   - action: utter_new_one_happy
 
-- story:
+- story: use
   steps:
   - intent: ask_for_use
   - action: utter_use

@@ -14,8 +14,14 @@ class ActionArtist(Action):
 
     def run(self, dispatcher, tracker, domain):
         #search ist die Variable "search", die vom Bot übergeben wird; sie repräsentiert das, was der user suchen will
-        search = tracker.get_slot("search")
-        if str(search).strip() == None:
+        search = tracker.latest_message["text"]
+        start = str(search).find('"')
+        end = str(search).find('"', start+1)
+        search = str(search)[start:end].strip('"')
+
+        print(search)
+
+        if str(search).strip('"').strip() == None:
             #Antwort, wenn nichts eingegeben wurde
             dispatcher.utter_message("Du hast doch noch garnichts eingegeben") #Fehlermeldung, wenn nichts eingegeben wurde
         else:
@@ -23,17 +29,17 @@ class ActionArtist(Action):
 
             #--------------------------------------------
             #Antwort bei erfolgreicher Anfrage
-            answer = f"Ich hätte die hier für dich gefunden: {result1}"
+            answer = f"Ich hätte die hier für dich gefunden:\n{result1}"
             if result2 != "":
-                answer = f"Ich hätte die hier für dich gefunden: {result1}, {result2}"
+                answer = f"Ich hätte die hier für dich gefunden:\n{result1}\n{result2}"
             if result3 != "":
-                answer = f"Ich hätte die hier für dich gefunden: {result1}, {result2}, {result3}"
+                answer = f"Ich hätte die hier für dich gefunden:\n{result1}\n{result2}\n{result3}"
             if result4 != "":
-                answer = f"Ich hätte die hier für dich gefunden: {result1}, {result2}, {result3}, {result4}"
+                answer = f"Ich hätte die hier für dich gefunden:\n{result1}\n{result2}\n{result3}\n{result4}"
             if result5 != "":
-                answer = f"Ich hätte die hier für dich gefunden: {result1}, {result2}, {result3}, {result4}, {result5}"
+                answer = f"Ich hätte die hier für dich gefunden:\n{result1}\n{result2}\n{result3}\n{result4}\n{result5}"
             if result6 != "":
-                answer = f"Ich hätte die hier für dich gefunden: {result1}, {result2}, {result3}, {result4}, {result5}, {result6}"
+                answer = f"Ich hätte die hier für dich gefunden:\n{result1}\n{result2}\n{result3}\n{result4}\n{result5}\n{result6}"
             #--------------------------------------------
 
             if "error" in result1:
