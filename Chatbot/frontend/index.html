@@ -1,0 +1,42 @@
+<!-- NOTE: During deployment replace localhost with your hosts IP (if you do not use a reverse-proxy). -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="./styles.css">
+        <title>SoundBot</title>
+        <style>
+            .box {
+              width: 1420px;
+              height: 200px;
+              background-color: rgb(95,96,255);
+              border: 0px solid black;
+              border-style: groove;
+            }
+          </style>
+    </head>
+    <body style="background-color: rgb(46, 47, 119);">
+        <div 
+            id="rasa-chat-widget" 
+            data-websocket-url="http://localhost:5005/"  
+            data-height=600
+            data-avatar-url="./chatbot.png"
+            data-avatar-background="#FFFFFF"
+            data-primary="#5F60FF"
+            data-default-open="true"
+            data-primary-highlight="##c4d32b">
+        </div>
+        <script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
+        <div class="box">
+            <img src="./chatbotIconBackground.png" class="icon"/>
+            <img src="./bannerFrei.png" class="banner"/>
+          </div>
+        <!-- <img src="./chatbot.png" class="icon"/>
+        <img src="./bannerV2.png" class="banner"/> -->
+        <!-- <h1 class="main-title">SoundBot </h1> -->
+    </body>
+    </html>
+    

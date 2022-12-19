@@ -1,14 +1,12 @@
-# Chatbot Projektmodul Start
+![bannerIconV5](https://user-images.githubusercontent.com/115628643/208322040-7879604c-5a85-42dc-8a7a-2c8bcadbf828.png)
 
-Beschreiben Sie kurz Ihre Projektidee (mit Bild oder Storyboard)
 
-Verweisen Sie für mehr Information auf die Wiki Seite (https://github.com/ID-Start-Winter22/chat-team-9/wiki)
 
------------------------------------------------------------------------------------------------------------------------------------------------------------
+# SoundBot - dein Musikassistent 🎸
+Der SoundBot ist ein Bot der dir hilft Inspiration zu finden, um deinen Musikalischen Horizont zu erweitern. 
+Wenn du mir einen Artist oder Song vorschlägst, der dir gefällt, kann ich dir Artists oder Songs liefern, die dir auch gefallen könnten. 
+So kannst du dich ganz auf die Musik konzentrieren und der SoundBot übernimmt die Recherche.
+Also lets goo…! 🤘
 
-SoundBot
-- Ein Bot mit dem über Musik gesprochen werden kann und der einem hilft neue Künstler und Genres zu entdecken
-        
-SoundBot im Wiki (https://github.com/ID-Start-Winter22/chat-team-9/wiki/Sound-Bot)
+Mehr Infos gibts im Wiki (https://github.com/ID-Start-Winter22/SoundBot/wiki)
 
-User Research und Sprint 0 (https://github.com/ID-Start-Winter22/chat-team-9/wiki/User-Research-und-Sprint-0)

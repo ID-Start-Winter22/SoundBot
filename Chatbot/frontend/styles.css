@@ -1,0 +1,27 @@
+
+.icon {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 25%;
+    height: auto;
+    margin: 0px;
+}
+
+.banner {
+    position: absolute;
+    top: 0px;
+    left: 300px;
+    width: 50%;
+    height: auto;
+    margin: 0px;
+}
+
+.main-title {
+    position: absolute;
+    top: 60px;
+    left: 200px;
+    width: 10%;
+    height: auto;
+    margin: 0px;
+}
