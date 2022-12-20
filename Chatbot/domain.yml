@@ -60,7 +60,6 @@ responses:
   utter_goodbye:
   - text: "Bye 🤘"
   - text: "Bye, bye 👋"
-  - text: "Tschau Tschau 👋"
   - text: "Bis zum nächstes mal 👋"
   - text: "Wir sehen uns 👋"
 
