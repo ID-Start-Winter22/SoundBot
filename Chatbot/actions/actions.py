@@ -6,6 +6,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
 from . import spotify
+from . import wiki
 
 class ActionArtist(Action):
 
@@ -61,8 +62,14 @@ class ActionTrack(Action):
 
     def run(self, dispatcher, tracker, domain):
         #search ist die Variable "search", die vom Bot übergeben wird; sie repräsentiert das, was der user suchen will
-        search = tracker.get_slot("search")
-        if str(search).strip() == None:
+        search = tracker.latest_message["text"]
+        start = str(search).find('"')
+        end = str(search).find('"', start+1)
+        search = str(search)[start:end].strip('"')
+
+        print(search)
+
+        if str(search).strip('"').strip() == None:
             #Antwort, wenn nichts eingegeben wurde
             dispatcher.utter_message("Du hast doch noch garnichts eingegeben")
         else:
@@ -71,3 +78,26 @@ class ActionTrack(Action):
 
         return []
 
+class ActionInfo(Action):
+
+    def name(self) -> Text:
+        return "action_get_info"
+
+    def run(self, dispatcher, tracker, domain):
+        #search ist die Variable "search", die vom Bot übergeben wird; sie repräsentiert das, was der user suchen will
+        search = tracker.latest_message["text"]
+        start = str(search).find('"')
+        end = str(search).find('"', start+1)
+        search = str(search)[start:end].strip('"')
+
+        print(search)
+
+        if str(search).strip('"').strip() == None:
+            #Antwort, wenn nichts eingegeben wurde
+            dispatcher.utter_message("Du hast doch noch garnichts eingegeben")
+        else:
+            result = wiki.getInfo(search)
+            #Ausgabe der Antwort, wenn die Anfrage erfolgreich war
+            dispatcher.utter_message(result)
+
+        return []

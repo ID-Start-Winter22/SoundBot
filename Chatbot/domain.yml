@@ -5,6 +5,7 @@ intents:
   - goodbye
   - ask_for_similar_artist
   - ask_for_similar_track
+  - ask_for_info
   - ask_for_back
   - short
   - long
@@ -12,23 +13,74 @@ intents:
   - ask
   - type_artist
   - type_song
+  - type_info
   - affirm
   - deny
   
 actions:
   - action_get_similar_artist
   - action_get_similar_track
+  - action_get_info
 
 entities:
   - search
 
 slots:
-  search:
-    type: any
-    influence_conversation: false
+  start:
+    type: bool
+    initial_value: true
+    influence_conversation: true
     mappings:
-    - type: from_entity
-      entity: search
+    - type: from_intent
+      value: false
+      intent: ask_for_back
+    - type: from_intent
+      value: false
+      intent: ask_for_use
+    - type: from_intent
+      value: false
+      intent: ask
+
+  types:
+    type: categorical
+    initial_value: none
+    influence_conversation: true
+    values:
+      - none
+      - artist
+      - track
+      - info
+    mappings:
+    - type: from_intent
+      value: none
+      intent: 
+        - ask_for_back
+        - ask_for_use
+        - ask
+        - goodbye
+        - greet
+      not_intent:
+        - type_song
+        - type_artist
+        - type_info
+    - type: from_intent
+      value: artist
+      intent: type_artist
+      not_intent:
+        - type_song
+        - type_info
+    - type: from_intent
+      value: track
+      intent: type_song
+      not_intent:
+        - type_artist
+        - type_info
+    - type: from_intent
+      value: info
+      intent: type_info
+      not_intent:
+        - type_artist
+        - type_song
 
 responses:
   utter_greet:
@@ -87,6 +139,8 @@ responses:
         payload: "Artist"
       - title: "Song 🎶"
         payload: "Song"
+      - title: "Info"
+        payload: "Info"
 
   utter_artist:
   - text: 'Welchen Artist hörst du aktuell gerne? (Schreib deine Suche am besten in "")'
@@ -98,6 +152,9 @@ responses:
   - text: 'Welcher Song gefällt dir? (Schreib deine Suche am besten in "")'
   - text: 'Gib mir einen Son der dir gefällt (Schreib deine Suche am besten in "")'
   - text: 'Welcher Song gefällt dir in letzter Zeit besonders gut? (Schreib deine Suche am besten in "")'
+
+  utter_info:
+  - text: 'Und zu wem darf ich dir Infos geben? (Schreib deine Suche am besten in "")'
 
   utter_satisfaction_artist:
   - text: "Hat dir der Artist gefallen?"
