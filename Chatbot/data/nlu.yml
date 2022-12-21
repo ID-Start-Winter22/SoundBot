@@ -21,6 +21,7 @@ nlu:
   examples: |
     - Info zu ["Michael Jackson"](search)
     - Mehr über ["[a-zA-Z]"](search)
+    - ["Metallica"](search)
 
 - intent: greet
   examples: |

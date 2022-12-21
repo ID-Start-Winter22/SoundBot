@@ -65,7 +65,7 @@ stories:
   - action: action_get_similar_track
   - action: utter_satisfaction_track
 
-- story: 
+- story: ask for info
   steps:
   - slot_was_set:
     - types: info
