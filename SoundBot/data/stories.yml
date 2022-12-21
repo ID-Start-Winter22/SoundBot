@@ -1,0 +1,86 @@
+version: "3.0"
+
+stories:
+- story: greet
+  steps: 
+  - intent: greet
+  - action: utter_greet
+
+- story: Ask for background long
+  steps:
+  - intent: ask_for_back
+  - action: utter_back_ask
+  - intent: long
+  - action: utter_back_long
+  - action: utter_new_one_happy
+
+- story: Ask for background short
+  steps:
+  - intent: ask_for_back
+  - action: utter_back_ask
+  - intent: short
+  - action: utter_back_short
+  - action: utter_new_one_happy
+
+- story: use
+  steps:
+  - intent: ask_for_use
+  - action: utter_use
+  - action: utter_new_one_happy
+
+- story: type artist
+  steps:
+  - intent: ask
+  - action: utter_type_ask
+  - intent: type_artist
+  - action: utter_artist
+
+- story: type track
+  steps:
+  - intent: ask
+  - action: utter_type_ask
+  - intent: type_song
+  - action: utter_song
+
+- story: type_info
+  steps:
+  - intent: ask
+  - action: utter_type_ask
+  - intent: type_info
+  - action: utter_info
+
+- story: ask for artsist
+  steps:
+  - slot_was_set: 
+    - types: artist
+  - intent: ask_for_similar_artist
+  - action: action_get_similar_artist
+  - action: utter_satisfaction_artist
+
+- story: ask for track
+  steps:
+  - slot_was_set: 
+    - types: track
+  - intent: ask_for_similar_track
+  - action: action_get_similar_track
+  - action: utter_satisfaction_track
+
+- story: ask for info
+  steps:
+  - slot_was_set:
+    - types: info
+  - intent: ask_for_info
+  - action: action_get_info
+  - action: utter_new_one_happy
+
+- story: satisfied
+  steps:
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_new_one_happy
+
+- story: not satisfied
+  steps:
+  - intent: deny
+  - action: utter_sad
+  - action: utter_new_one_sad

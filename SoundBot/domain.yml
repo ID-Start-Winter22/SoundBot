@@ -1,0 +1,239 @@
+version: "3.0"
+
+intents:
+  - greet
+  - goodbye
+  - ask_for_similar_artist
+  - ask_for_similar_track
+  - ask_for_info
+  - ask_for_back
+  - short
+  - long
+  - ask_for_use
+  - ask
+  - type_artist
+  - type_song
+  - type_info
+  - affirm
+  - deny
+  
+actions:
+  - action_get_similar_artist
+  - action_get_similar_track
+  - action_get_info
+
+entities:
+  - search
+
+slots:
+  start:
+    type: bool
+    initial_value: true
+    influence_conversation: true
+    mappings:
+    - type: from_intent
+      value: false
+      intent: ask_for_back
+    - type: from_intent
+      value: false
+      intent: ask_for_use
+    - type: from_intent
+      value: false
+      intent: ask
+
+  types:
+    type: categorical
+    initial_value: none
+    influence_conversation: true
+    values:
+      - none
+      - artist
+      - track
+      - info
+    mappings:
+    - type: from_intent
+      value: none
+      intent: 
+        - ask_for_back
+        - ask_for_use
+        - ask
+        - goodbye
+        - greet
+      not_intent:
+        - type_song
+        - type_artist
+        - type_info
+    - type: from_intent
+      value: artist
+      intent: type_artist
+      not_intent:
+        - type_song
+        - type_info
+    - type: from_intent
+      value: track
+      intent: type_song
+      not_intent:
+        - type_artist
+        - type_info
+    - type: from_intent
+      value: info
+      intent: type_info
+      not_intent:
+        - type_artist
+        - type_song
+
+responses:
+  utter_greet:
+  - text: "Willkommen! Nach was suchst du? 😉"
+    buttons:
+      - title: "Was Neues 🔎"
+        payload: "Zeig mir was Neues"
+      - title: "Was kannst du? 🛠️"
+        payload: "Was kannst du?"
+      - title: "Wer bist du? 🤖"
+        payload: "Wer bist du?"
+  - text: "Hey, wie kann ich dir helfen? 😉"
+    buttons:
+      - title: "Was Neues 🔎"
+        payload: "Zeig mir was Neues"
+      - title: "Was kannst du? 🛠️"
+        payload: "Was kannst du?"
+      - title: "Wer bist du? 🤖"
+        payload: "Wer bist du?"
+  - text: "Hey, lust auf neuen Sound? 😏"
+    buttons:
+      - title: "Was Neues 🔎"
+        payload: "Zeig mir was Neues"
+      - title: "Was kannst du? 🛠️"
+        payload: "Was kannst du?"
+      - title: "Wer bist du? 🤖"
+        payload: "Wer bist du?"
+
+  utter_goodbye:
+  - text: "Bye 🤘"
+  - text: "Bye, bye 👋"
+  - text: "Bis zum nächstes mal 👋"
+  - text: "Wir sehen uns 👋"
+
+  utter_back_ask:
+  - text: "Die kurze oder die lange Version?"
+    buttons:
+      - title: "kurz..."
+        payload: "Die kurze Version"
+      - title: "lang..."
+        payload: "Die lange Version"
+
+  utter_back_short:
+  - text: "Ich bin SoundBot, Ein Bot der dir ich hilft Inspiration zu finden, um deinen Musik Horizont zu erweitern. Also lets goo…! 🤘"
+
+  utter_back_long:
+  - text: "Ich bin SoundBot, Ein Bot der dir ich hilft Inspiration zu finden, um deinen Musik Horizont zu erweitern. Wenn du mir einen Artist oder Song vorschlägst, der dir gefällt, kann ich dir Artists oder Songs liefern, die dir auch gefallen könnten. Also lets goo…! 🤘"
+
+  utter_use:
+  - text: "Hey! 👋 Ich bin dein SoundBot und helfe dir deinen musikalischen Horizont zu erweitern und neue Songs und Artists kennenzulernen! Sag mir einfach was oder wen du gerne hörst und Ich zeige dir, welche Songs und Artists du auf keinen Fall unentdeckt lassen solltest. 😉 (aktuell nur Michael Jackson, Metallica, Lorna Shore, Frost Clad (als Beispiel für Artists ohne ähnliche Artists) und 1111111111111 (als Beispiel für ungültige Artists), weil Rasa andere Artists nicht erkennen will. Ähnliches bei Songs (nur Beat It möglich))"
+
+  utter_type_ask:
+  - text: "Was suchst du denn?"
+    buttons:
+      - title: "Artist 👤"
+        payload: "Artist"
+      - title: "Song 🎶"
+        payload: "Song"
+      - title: "Info"
+        payload: "Info"
+
+  utter_artist:
+  - text: 'Welchen Artist hörst du aktuell gerne? (Schreib deine Suche am besten in "")'
+  - text: 'Welcher Artist gefällt dir? (Schreib deine Suche am besten in "")'
+  - text: 'Gib mir einen Artist der dir gefällt (Schreib deine Suche am besten in "")'
+
+  utter_song:
+  - text: 'Welchen Song hörst du aktuell gerne? (Schreib deine Suche am besten in "")'
+  - text: 'Welcher Song gefällt dir? (Schreib deine Suche am besten in "")'
+  - text: 'Gib mir einen Son der dir gefällt (Schreib deine Suche am besten in "")'
+  - text: 'Welcher Song gefällt dir in letzter Zeit besonders gut? (Schreib deine Suche am besten in "")'
+
+  utter_info:
+  - text: 'Und zu wem darf ich dir Infos geben? (Schreib deine Suche am besten in "")'
+
+  utter_satisfaction_artist:
+  - text: "Hat dir der Artist gefallen?"
+    buttons:
+      - title: "Gut 👍"
+        payload: "Gut"
+      - title: "Schlecht 👎"
+        payload: "Schlecht"
+  - text: "Wie gefällt dir der Artist?"
+    buttons:
+      - title: "Gut 👍"
+        payload: "Gut"
+      - title: "Schlecht 👎"
+        payload: "Schlecht"
+  - text: "Ist das dein geschmack?"
+    buttons:
+      - title: "Gut 👍"
+        payload: "Gut"
+      - title: "Schlecht 👎"
+        payload: "Schlecht"
+
+  utter_satisfaction_track:
+  - text: "Wie gefällt dir der Song?"
+    buttons:
+      - title: "Gut 👍"
+        payload: "Gut"
+      - title: "Schlecht 👎"
+        payload: "Schlecht"
+  - text: "Hat dir das Lied gefallen?"
+    buttons:
+      - title: "Gut 👍"
+        payload: "Gut"
+      - title: "Schlecht 👎"
+        payload: "Schlecht"
+  - text: "Ist das dein geschmack?"
+    buttons:
+      - title: "Gut 👍"
+        payload: "Gut"
+      - title: "Schlecht 👎"
+        payload: "Schlecht"
+
+  utter_happy:
+  - text: "Super! 😁"
+  - text: "Toll! 😆"
+  - text: "Cool 😎"
+
+  utter_new_one_happy:
+  - text: "Brauchst du noch was? 🤔"
+    buttons:
+      - title: "Was Neues 🔎"
+        payload: "Zeig mir was Neues"
+      - title: "Was kannst du? ⚙️"
+        payload: "Was kannst du?"
+      - title: "Wer bist du? 🤖"
+        payload: "Wer bist du?"
+
+  utter_sad:
+  - text: "Schade, sollen wir's nochmal versuchen? 😉"
+  - text: "Ich bin wohl eingerostet, sollen wir's nochmal versuchen? 😉"
+  - text: "Oh, sollen wir's nochmal versuchen? 😉"
+
+  utter_new_one_sad:
+  - text: "Willst du was anderes versuchen?"
+    buttons:
+      - title: "Was Neues 🔎"
+        payload: "Zeig mir was Neues"
+      - title: "Was kannst du? 🛠️"
+        payload: "Was kannst du?"
+      - title: "Wer bist du? 🤖"
+        payload: "Wer bist du?"
+  - text: "Komm wir probierens nochmal?"
+    buttons:
+      - title: "Was Neues 🔎"
+        payload: "Zeig mir was Neues"
+      - title: "Was kannst du? 🛠️"
+        payload: "Was kannst du?"
+      - title: "Wer bist du? 🤖"
+        payload: "Wer bist du?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,104 @@
+version: "3.0"
+
+nlu:
+- intent: ask_for_similar_artist
+  examples: |
+    - Gibts was Ähnliches zu ["Michael Jackson"](search)?
+    - Ähnliches zu ["Lorna Shore"](search)
+    - ["Metallica"](search)
+    - ["Frost Clad"](search)
+    - ["111111111111111111"](search)
+    - ["a-zA-Z0-9"](search)
+    - ["[a-zA-Z]"](search)
+
+- intent: ask_for_similar_track
+  examples: |
+    - Gibts was Ähnliches zu [Beat It](search)?
+    - Ähnliches zu [Beat It](search)
+    - [Beat It](search)
+
+- intent: ask_for_info
+  examples: |
+    - Info zu ["Michael Jackson"](search)
+    - Mehr über ["[a-zA-Z]"](search)
+    - ["Metallica"](search)
+
+- intent: greet
+  examples: |
+    - guten Tag
+    - Servus
+    - Hallo
+    - hallo
+
+- intent: goodbye
+  examples: |
+    - Tschüss
+    - Auf wiedersehen
+    - Bye
+
+- intent: ask_for_back
+  examples: |
+    - Wo kommst du her?
+    - Wer bist du?
+    - Was bist du?
+    - Wie lautet deine Hintergrundgeschichte?
+
+- intent: long
+  examples: |
+    - Die lange Version
+    - Die lange Geschichte
+    - Ausführlich bitte
+    - Die Lange
+    - lang
+
+- intent: short
+  examples: |
+    - Die kurze Version
+    - Die kurze Geschichte
+    - Kurz bitte
+    - Die Kurze
+    - kurz
+
+- intent: ask_for_use
+  examples: |
+    - Was kannst du?
+    - Was sind deine Aufgaben?
+
+- intent: ask
+  examples: |
+    - Zeig mir etwas Neues
+    - Was Neues
+
+- intent: type_artist
+  examples: |
+    - Artist
+    - Künstler
+    - Interpret
+    - Nach einem Artist
+    - Nach einem Künstler
+    - Nach einem Interpreten
+
+- intent: type_song
+  examples: |
+    - Track
+    - Song
+    - Nach einem Track
+    - Nach einem Song
+
+- intent: type_info
+  examples: |
+    - Info
+    - Gib mir Infos
+
+- intent: affirm
+  examples: |
+    - Ja
+    - J
+    - Y
+    - Gut
+
+- intent: deny
+  examples: |
+    - Nein
+    - N
+    - Schlecht
