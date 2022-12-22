@@ -1,0 +1,16 @@
+Commands zum ChatBot starten
+
+conda activate rasaenv
+cd /Users/leonhardstraub/Documents/GitHub/chat-team-9/SoundBot (für Leo)
+
+1. Terminal:
+rasa train
+rasa run --cors "*"
+
+2. Terminal starten:
+rasa run actions
+
+3. Terminal:
+python -m http.server
+
+http://localhost:8000
