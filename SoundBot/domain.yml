@@ -150,7 +150,7 @@ responses:
   - text: "Ich bin SoundBot, ein Bot der dir ich hilft Inspiration zu finden, um deinen Musik Horizont zu erweitern. Also lets goo…! 🤘    Mehr Infos zum mir findes du im GitHub Wiki: https://github.com/ID-Start-Winter22/SoundBot/wiki"
 
   utter_back_long:
-  - text: "Ich bin SoundBot, ein Bot der dir ich hilft Inspiration zu finden, um deinen Musik Horizont zu erweitern. Wenn du mir einen Artist oder Song vorschlägst, der dir gefällt, kann ich dir Artists oder Songs liefern, die dir auch gefallen könnten. Also lets goo…! 🤘     Mehr Infos zum mir findes du im GitHub Wiki: https://github.com/ID-Start-Winter22/SoundBot/wiki"
+  - text: "Ich bin SoundBot, ein Bot der dir ich hilft Inspiration zu finden, um deinen Musik Horizont zu erweitern. Wenn du mir einen Artist oder Song vorschlägst, der dir gefällt, kann ich dir Artists oder Songs liefern, die dir auch gefallen könnten. Also lets goo…! 🤘      Mehr Infos zum mir findes du im GitHub Wiki: https://github.com/ID-Start-Winter22/SoundBot/wiki"
 
   utter_use:
   - text: "Hey! 👋 Ich bin dein SoundBot und helfe dir deinen musikalischen Horizont zu erweitern und neue Songs und Artists kennenzulernen! Sag mir einfach was oder wen du gerne hörst und Ich zeige dir, welche Songs und Artists du auf keinen Fall unentdeckt lassen solltest. 😉 (aktuell nur Michael Jackson, Metallica, Lorna Shore, Frost Clad (als Beispiel für Artists ohne ähnliche Artists) und 1111111111111 (als Beispiel für ungültige Artists), weil Rasa andere Artists nicht erkennen will. Ähnliches bei Songs (nur Beat It möglich))"
