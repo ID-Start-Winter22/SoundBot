@@ -162,7 +162,7 @@ responses:
         payload: "Artist"
       - title: "Song 🎶"
         payload: "Song"
-      - title: "Info"
+      - title: "Info ℹ️"
         payload: "Info"
 
   utter_artist:
