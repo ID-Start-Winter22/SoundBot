@@ -6,26 +6,35 @@
     "support": 3,
     "confused_with": {}
   },
-  "ask_for_back": {
+  "type_artist": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 4,
+    "support": 6,
     "confused_with": {}
   },
-  "long": {
+  "ask_for_info": {
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1-score": 0.8571428571428571,
+    "support": 3,
+    "confused_with": {}
+  },
+  "short": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 5,
     "confused_with": {}
   },
-  "ask_for_use": {
+  "ask_for_similar_artist": {
     "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 2,
-    "confused_with": {}
+    "recall": 0.8571428571428571,
+    "f1-score": 0.923076923076923,
+    "support": 7,
+    "confused_with": {
+      "ask_for_info": 1
+    }
   },
   "ask_for_similar_track": {
     "precision": 1.0,
@@ -41,32 +50,11 @@
     "support": 4,
     "confused_with": {}
   },
-  "ask": {
+  "ask_for_use": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 2,
-    "confused_with": {}
-  },
-  "deny": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 3,
-    "confused_with": {}
-  },
-  "short": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 5,
-    "confused_with": {}
-  },
-  "type_artist": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6,
     "confused_with": {}
   },
   "affirm": {
@@ -76,13 +64,6 @@
     "support": 4,
     "confused_with": {}
   },
-  "ask_for_similar_artist": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 7,
-    "confused_with": {}
-  },
   "type_song": {
     "precision": 1.0,
     "recall": 1.0,
@@ -90,17 +71,52 @@
     "support": 4,
     "confused_with": {}
   },
-  "accuracy": 1.0,
-  "macro avg": {
+  "ask_for_back": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 52
+    "support": 4,
+    "confused_with": {}
+  },
+  "long": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "deny": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3,
+    "confused_with": {}
+  },
+  "type_info": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "ask": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "accuracy": 0.9824561403508771,
+  "macro avg": {
+    "precision": 0.9833333333333333,
+    "recall": 0.9904761904761905,
+    "f1-score": 0.9853479853479854,
+    "support": 57
   },
   "weighted avg": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 52
+    "precision": 0.9868421052631579,
+    "recall": 0.9824561403508771,
+    "f1-score": 0.9830345093502988,
+    "support": 57
   }
 }

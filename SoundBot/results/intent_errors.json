@@ -1,0 +1,10 @@
+[
+  {
+    "text": "\"Metallica\"",
+    "intent": "ask_for_similar_artist",
+    "intent_prediction": {
+      "name": "ask_for_info",
+      "confidence": 0.6195603013038635
+    }
+  }
+]

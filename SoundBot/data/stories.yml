@@ -75,12 +75,16 @@ stories:
 
 - story: satisfied
   steps:
+  - slot_was_set:
+    - types: none
   - intent: affirm
   - action: utter_happy
   - action: utter_new_one_happy
 
 - story: not satisfied
   steps:
+  - slot_was_set:
+    - types: none
   - intent: deny
   - action: utter_sad
   - action: utter_new_one_sad

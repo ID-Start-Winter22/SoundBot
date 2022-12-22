@@ -53,12 +53,35 @@ slots:
     mappings:
     - type: from_intent
       value: none
-      intent: 
-        - ask_for_back
-        - ask_for_use
-        - ask
-        - goodbye
-        - greet
+      intent: ask_for_back
+      not_intent:
+        - type_song
+        - type_artist
+        - type_info
+    - type: from_intent
+      value: none
+      intent: ask_for_use
+      not_intent:
+        - type_song
+        - type_artist
+        - type_info
+    - type: from_intent
+      value: none
+      intent: ask
+      not_intent:
+        - type_song
+        - type_artist
+        - type_info
+    - type: from_intent
+      value: none
+      intent: goodbye
+      not_intent:
+        - type_song
+        - type_artist
+        - type_info
+    - type: from_intent
+      value: none
+      intent: greet
       not_intent:
         - type_song
         - type_artist

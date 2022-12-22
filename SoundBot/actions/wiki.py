@@ -1,5 +1,5 @@
 import requests
-#import markdown
+import markdown
 import json
 
 def getInfo(name: str):
@@ -10,7 +10,7 @@ def getInfo(name: str):
     pageId = list(dict(page).keys())[0]
     info = page[str(pageId)]["extract"]
     info = str(info)[:str(info).find("</p>")].strip("<p>")
-    #info = markdown.markdown(info, heading_style="ATX")
+    info = markdown.markdown(info, heading_style="ATX")
     return info
 
 print(getInfo("Michael Jackson"))
