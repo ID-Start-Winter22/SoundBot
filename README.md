@@ -3,7 +3,7 @@
 
 
 # SoundBot - dein Musikassistent 🎸
-Der SoundBot ist ein Bot der dir hilft Inspiration zu finden, um deinen Musikalischen Horizont zu erweitern. 
+Der SoundBot ist ein Bot der dir hilft Inspiration zu finden, um deinen musikalischen Horizont zu erweitern. 
 Wenn du ihm einen Artist oder Song vorschlägst, der dir gefällt, kann er dir Artists oder Songs liefern, die dir auch gefallen könnten. 
 So kannst du dich ganz auf die Musik konzentrieren und der SoundBot übernimmt die Recherche.
 Also lets goo…! 🤘
