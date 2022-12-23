@@ -23,5 +23,6 @@ infosection{
 }
 
 .infobox a:hover {
-    color: var(--link-hover);
+
+    color: var(--link-pink);
 }
