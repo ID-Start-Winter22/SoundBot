@@ -31,6 +31,6 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--link-hover);
+    color: var(--link-pink);
 }
 
