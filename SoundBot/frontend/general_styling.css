@@ -8,7 +8,8 @@
     --secondary-color-dark: #4d4dd2;
     --text-color: rgb(255, 255, 255);
     --text-color-secondary: #dedede;
-    --text-hover: #d49dfe;
+    --link-hover: rgb(249, 146, 234);
+    --link: rgb(255, 255, 255);
 }
 
 *{
@@ -28,7 +29,18 @@ h1{
     font-family: 'Poppins', sans-serif;  
     font-size: 80px;
     line-height: 100%;
-
+}
+h2{
+    /* font-family: 'Racing Sans One', cursive; */
+    font-family: 'Poppins', sans-serif;  
+    font-size: 40px;
+    line-height: 100%;
+}
+h3{
+    /* font-family: 'Racing Sans One', cursive; */
+    font-family: 'Poppins', sans-serif;  
+    font-size: 25px;
+    line-height: 100%;
 }
 /* .textbox{
     margin-top: 25px;

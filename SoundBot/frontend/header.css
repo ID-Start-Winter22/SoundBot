@@ -26,11 +26,11 @@ nav ul {
 }
 
 nav a {
-    color: var(--text-color);
+    color: var(--link);
     text-decoration: none;
 }
 
 nav a:hover {
-    color: var(--text-hover);
+    color: var(--link-hover);
 }
 

@@ -10,16 +10,17 @@
         <link rel="stylesheet" href="general_styling.css">
         <link rel="stylesheet" href="header.css">
         <link rel="stylesheet" href="section.css">
-
+        <!-- <link rel="stylesheet" href="infosection.css"> -->
+        
     </head>
     <body>
       <header>
           <div class="header_text">
               <nav>
                   <ul>
-                      <li><a href="https://github.com/ID-Start-Winter22/SoundBot/wiki"target="_blank">About</a></li>
-                      <li><a href=""target="_blank">Team</a></li>
+                      <li><a href="http://localhost:8000/frontend/">SoundBot</a></li>
                       <li><a href="https://github.com/ID-Start-Winter22/SoundBot/"target="_blank">GitHub</a></li>
+                      <li><a href="https://developer.spotify.com/"target="_blank">API</a></li>
                   </ul>
               </nav>
               </div>
@@ -36,19 +37,43 @@
                 So kannst du dich ganz auf die Musik konzentrieren und der SoundBot übernimmt die Recherche. <br>
                 Also lets goo…! 🤘</div>
 
-          <div 
-              id="rasa-chat-widget" 
-              data-websocket-url="http://localhost:5005/"  
-              data-height=550
-              data-avatar-url="./iconImChatFace.png"
-              data-avatar-background="#FFFFFF"
-              data-primary="#5F60FF"
-              data-default-open="true"
-              data-primary-highlight="##c4d32b">
-          </div>
-          <script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
+        <infosection>
+            <div class="textbox-unten">
+                <h2><br>Infos zum Bot...</h2>
+                <h3><br><br>Was kann der Bot aktuell? ✅</h3>
+                <p class="subhadding" >Wenn du dem SoundBot einen Artist gibst, der dir gefällt kann er Ähnliche Artists finden.<br> (aktuell funktionieren nur Michael Jackson, Metallica, Lorna Shore, Frost Clad)<br>
+                <h3><br><br>Was ist noch geplant? ⚙️</h3>
+                <p class="subhadding" >Wenn du dem SoundBot einen Songs gibst, der dir gefällt kann er Ähnliche Songs finden.<br>
+                <h3><br><br>Was kann der Bot nicht? 🚫</h3>
+                <p class="subhadding" >Der Bot kann nicht auf deinen Spotify Account zugreifen. <br>Auch das abspielen von Songs ist nicht möglich.
+                <h3><br><br>API 🔄</h3>
+                <p class="subhadding" >Unser Bot nutzt die Spotify API. <br>
+                <a href="https://developer.spotify.com/" target="_blank">Spotify API</a></li>
+                <h3><br><br>Team 👥</h3>
+                <p class="subhadding">Wir sind Informatik & Design Studenten an der Hochschule München. <br>Im Rahmen unseres Projektmoduls bauen wir einen Chatbot, für den Anwendungsbereich des Bots gibt es keine Einschränkungen. <br>Der Entstehungsprozess beinhaltet insgesamt 3 Sprints. Die Projektzeit beträgt 3 Monate und endet im Januar 2023.<br>
+                <p class="subhadding"><br>Wir sind
+                <a href="https://github.com/leostraub" target="_blank">Leonhard Straub</a></li> &
+                <a href="https://github.com/SchlechtePoesieIstProgramm" target="_blank">Samuel Leu</a></li>
+                <p class="subhadding"><br><br>
+            </ul>
+    
+            </div>
+        </infosection>
+        <footer></footer>
+        <chat>                <div 
+            id="rasa-chat-widget" 
+            data-websocket-url="http://localhost:5005/"  
+            data-height=550
+            data-avatar-url="./iconImChatFace.png"
+            data-avatar-background="#FFFFFF"
+            data-primary="#5F60FF"
+            data-default-open="true"
+            data-primary-highlight="##c4d32b">
+            </div>
+            <script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
+        </chat>
+
       </section>
-      <footer></footer>
   </body>
   </html>  
     

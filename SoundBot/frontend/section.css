@@ -1,7 +1,7 @@
 section {
     padding: 0px 20px;
     display: flex;
-    justify-content: left;
+    /* justify-content: left; */
     /* align-items: center; */
     gap: 30px;
     flex-wrap: wrap;
@@ -26,9 +26,28 @@ section {
 
 .textbox{
     width: 403px;
-    height: 460px;
-    padding: 20px 20px;
+    height: 440px;
+    padding: 30px 30px;
     border-radius: 45px;
     /* background-color: var(--secondary-color-dark);  */
     background-color: #5555e7;
+}
+
+.textbox-unten{
+    width: max-content;
+    height: max-content;
+    padding: 10px 50px;
+    border-radius: 45px;
+    /* background-color: var(--secondary-color-dark);  */
+    background-color: #4141ae;
+}
+
+.textbox-unten a {
+    /* color: var(--text-color); */
+    color: lawngreen;
+    text-decoration: none;
+}
+
+.textbox-unten a:hover {
+    color: var(--link-hover);
 }
