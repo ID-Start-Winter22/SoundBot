@@ -1,4 +1,4 @@
-section {
+mainsection {
     padding: 0px 20px;
     display: flex;
     /* justify-content: left; */
@@ -8,8 +8,8 @@ section {
 }
 
 .icon {
-    height: 400px;
-    width: 400px;
+    height: 500px;
+    width: 500px;
     /* overflow: hidden; */
 
     display: flex;
@@ -18,7 +18,7 @@ section {
 }
 
 .icon img {
-    width: 80%;
+    width: 100%;
     border-radius: 45px; 
     /* background-color: var(--secondary-color-dark); */
     background-color: #5555e7;
@@ -33,21 +33,3 @@ section {
     background-color: #5555e7;
 }
 
-.textbox-unten{
-    width: max-content;
-    height: max-content;
-    padding: 10px 50px;
-    border-radius: 45px;
-    /* background-color: var(--secondary-color-dark);  */
-    background-color: #4141ae;
-}
-
-.textbox-unten a {
-    /* color: var(--text-color); */
-    color: lawngreen;
-    text-decoration: none;
-}
-
-.textbox-unten a:hover {
-    color: var(--link-hover);
-}

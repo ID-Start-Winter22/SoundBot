@@ -7,7 +7,7 @@ infosection{
     flex-wrap: wrap;
 }
 
-.textbox-unten{
+.infobox{
     width:max;
     height: max-content;
     padding: 10px 50px;
@@ -16,12 +16,12 @@ infosection{
     background-color: #4141ae;
 }
 
-.textbox-unten a {
+.infobox a {
     /* color: var(--text-color); */
     color: lawngreen;
     text-decoration: none;
 }
 
-.textbox-unten a:hover {
+.infobox a:hover {
     color: var(--link-hover);
 }
