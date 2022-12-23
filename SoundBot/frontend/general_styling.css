@@ -7,9 +7,11 @@
     --secondary-color: #5F60FF;
     --secondary-color-dark: #4d4dd2;
     --text-color: rgb(255, 255, 255);
-    --link: rgb(255, 255, 255);
-    --link-green:lawngreen;
+    --text-color-secondary: #dedede;
     --link-pink: rgb(249, 146, 234);
+    --link-green:lawngreen;
+    --link: rgb(255, 255, 255);
+    
 }
 
 *{
@@ -33,7 +35,7 @@ h1{
 h2{
     /* font-family: 'Racing Sans One', cursive; */
     font-family: 'Poppins', sans-serif;  
-    font-size: 50px;
+    font-size: 40px;
     line-height: 100%;
 }
 h3{
@@ -41,12 +43,14 @@ h3{
     font-family: 'Poppins', sans-serif;  
     font-size: 35px;
     line-height: 100%;
-}h4{
+}
+h4{
     /* font-family: 'Racing Sans One', cursive; */
     font-family: 'Poppins', sans-serif;  
     font-size: 25px;
     line-height: 100%;
 }
+
 /* .textbox{
     margin-top: 25px;
 } */
