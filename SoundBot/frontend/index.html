@@ -1,54 +1,54 @@
 <!-- NOTE: During deployment replace localhost with your hosts IP (if you do not use a reverse-proxy). -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <link rel="stylesheet" href="./styles.css">
         <title>SoundBot</title>
+        <link rel="stylesheet" href="general_styling.css">
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="section.css">
 
-        <style>
-            .box {
-              width: 1420px;
-              height: 200px;
-              background-color: #5F60FF;
-            }
-          </style>
-          <style>
-            nav a {
-              border: 3px solid #8888ff;
-              border-radius: 15px;
-              padding: 4px;
-              background-color: #8888ff;
-            }
-          </style>
     </head>
-    <body style="background-color: rgb(46, 47, 119);">
-      <nav>
-        <ul>
-          <li><img src="chatbotIconRoundV2.png" alt="Logo" class="icon"></li>
-          <li><img src="bannerFrei.png" alt="Logo" class="banner"></li>
-          <li><a href="https://github.com/ID-Start-Winter22/SoundBot/wiki" target="_blank">About</a> </li>
-          <li><a href="https://github.com/ID-Start-Winter22/SoundBot" target="_blank">GitHub</a> </li>
-        </ul>
-      </nav>
-        <div 
-            id="rasa-chat-widget" 
-            data-websocket-url="http://localhost:5005/"  
-            data-height=600
-            data-avatar-url="./iconImChatFace.png"
-            data-avatar-background="#FFFFFF"
-            data-primary="#5F60FF"
-            data-default-open="true"
-            data-primary-highlight="##c4d32b">
-        </div>
-        <script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
-        <div class="box">
-          <!-- <img src="./chatbotIconRoundV2.png" class="icon"/>
-          <img src="./bannerFrei.png" class="banner"/> -->
-        </div>
-    </body>
-    </html>
+    <body>
+      <header>
+          <div class="header_text">
+              <nav>
+                  <ul>
+                      <li><a href="https://github.com/ID-Start-Winter22/SoundBot/wiki"target="_blank">About</a></li>
+                      <li><a href="https://github.com/ID-Start-Winter22/SoundBot/"target="_blank">Team</a></li>
+                      <li><a href="https://github.com/ID-Start-Winter22/SoundBot/"target="_blank">GitHub</a></li>
+                  </ul>
+              </nav>
+              </div>
+  
+      </header>
+      <section>
+          <div class="icon">
+              <img src="images/chatbotIconRoundV2.png" alt="">
+          </div>
+          <div class="infotext">
+              <h1>SoundBot</h1>
+              <p class="subhadding" ><br>Der SoundBot ist ein Bot der dir hilft Inspiration zu finden,<br> um deinen Musikalischen Horizont zu erweitern. <br>Wenn du mir einen Artist oder Song vorschlägst, der dir gefällt, <br>kann ich dir Artists oder Songs liefern,
+                die dir auch gefallen könnten.<br>
+                So kannst du dich ganz auf die Musik konzentrieren<br>
+                und der SoundBot übernimmt die Recherche.<br>
+                Also lets goo…! 🤘</div>
+          <div 
+              id="rasa-chat-widget" 
+              data-websocket-url="http://localhost:5005/"  
+              data-height=600
+              data-avatar-url="./iconImChatFace.png"
+              data-avatar-background="#FFFFFF"
+              data-primary="#5F60FF"
+              data-default-open="true"
+              data-primary-highlight="##c4d32b">
+          </div>
+          <script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
+      </section>
+      <footer></footer>
+  </body>
+  </html>  
     

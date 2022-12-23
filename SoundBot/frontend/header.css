@@ -1,0 +1,36 @@
+header {
+    padding: 20px 20px;
+    display: flex;
+    justify-content: left;
+    align-items:center;
+    gap: 50px;
+    /* flex-wrap: wrap; */
+}
+
+.header_text {
+    width:10000px;
+}
+
+nav {
+    border-radius: 15px;
+    margin-bottom: 30px;
+    background-color: var(--secondary-color);
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    padding: 20px;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--text-hover);
+}
+
