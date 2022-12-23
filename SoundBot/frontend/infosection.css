@@ -1,8 +1,27 @@
-section {
-    padding: 0px 20px;
+infosection{
+    padding: 30px 20px;
     display: flex;
     /* justify-content: left; */
     /* align-items: center; */
-    gap: 30px;
+    /* gap: 0px; */
     flex-wrap: wrap;
+}
+
+.textbox-unten{
+    width:max;
+    height: max-content;
+    padding: 10px 50px;
+    border-radius: 45px;
+    /* background-color: var(--secondary-color-dark);  */
+    background-color: #4141ae;
+}
+
+.textbox-unten a {
+    /* color: var(--text-color); */
+    color: lawngreen;
+    text-decoration: none;
+}
+
+.textbox-unten a:hover {
+    color: var(--link-hover);
 }

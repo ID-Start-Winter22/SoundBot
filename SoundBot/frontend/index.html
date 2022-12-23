@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="general_styling.css">
         <link rel="stylesheet" href="header.css">
         <link rel="stylesheet" href="section.css">
-        <!-- <link rel="stylesheet" href="infosection.css"> -->
+        <link rel="stylesheet" href="infosection.css">
         
     </head>
     <body>
@@ -21,25 +21,29 @@
                       <li><a href="http://localhost:8000/frontend/">SoundBot</a></li>
                       <li><a href="https://github.com/ID-Start-Winter22/SoundBot/"target="_blank">GitHub</a></li>
                       <li><a href="https://developer.spotify.com/"target="_blank">API</a></li>
+                      <li><a href="#infosection">Infos</a></li>
                   </ul>
               </nav>
               </div>
   
       </header>
-      <section>
+        <section>
           <div class="icon">
             <img src="images/chatbotIconRoundV2.png" alt="">
           </div>
           <div class="textbox">
               <h1>SoundBot</h1>
-              <p class="subhadding" ><br>Der SoundBot ist ein Bot der dir hilft deinen Musikalischen Horizont zu erweitern. 
+                <!-- <p class="subhadding" ><br>Der SoundBot ist ein Bot der dir hilft deinen Musikalischen Horizont zu erweitern. 
                 Wenn du ihm einen Artist oder Song vorschlägst, der dir gefällt, kann er dir Artists oder Songs liefern, <br>die dir auch gefallen könnten. <br>
                 So kannst du dich ganz auf die Musik konzentrieren und der SoundBot übernimmt die Recherche. <br>
-                Also lets goo…! 🤘</div>
-
+                Also lets goo…! 🤘</div> -->
+                <p class="subhadding" ><br>"👋 Hey, ich bin's der SoundBot, ein Bot der dir hilft deinen musikalischen Horizont zu erweitern. <br>
+                    Wenn du mir einen Song oder Artest vorschlägst, der dir gefällt, kann ich dir andere Songs oder Artists liefern, <br>die dir sicher auch gefallen werden. <br>
+                    So kannst du dich auf die Musik konzentrieren und ich übernehme die Recherche. <br>Also lass uns Starten…! 🤘"</div>
+        </section>
         <infosection>
-            <div class="textbox-unten">
-                <h2><br>Infos zum Bot...</h2>
+            <div id="infosection"class="textbox-unten">
+                <h2><br>Infos...</h2>
                 <h3><br><br>Was kann der Bot aktuell? ✅</h3>
                 <p class="subhadding" >Wenn du dem SoundBot einen Artist gibst, der dir gefällt kann er Ähnliche Artists finden.<br> (aktuell funktionieren nur Michael Jackson, Metallica, Lorna Shore, Frost Clad)<br>
                 <h3><br><br>Was ist noch geplant? ⚙️</h3>
@@ -60,11 +64,12 @@
             </div>
         </infosection>
         <footer></footer>
-        <chat>                <div 
+        <chat>                
+            <div 
             id="rasa-chat-widget" 
             data-websocket-url="http://localhost:5005/"  
             data-height=550
-            data-avatar-url="./iconImChatFace.png"
+            data-avatar-url="./iconImChat.png"
             data-avatar-background="#FFFFFF"
             data-primary="#5F60FF"
             data-default-open="true"
@@ -73,7 +78,7 @@
             <script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
         </chat>
 
-      </section>
+      
   </body>
   </html>  
     
