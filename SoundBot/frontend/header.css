@@ -4,7 +4,7 @@ header {
     justify-content: left;
     align-items:center;
     gap: 50px;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
 }
 
 .header_text {
@@ -13,8 +13,8 @@ header {
 
 nav {
     border-radius: 15px;
-    margin-bottom: 30px;
-    background-color: var(--secondary-color);
+    margin-bottom: 10px;
+    background-color: var(--main-color);
 
 }
 
