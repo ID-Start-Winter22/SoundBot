@@ -1,45 +1,84 @@
 <!-- NOTE: During deployment replace localhost with your hosts IP (if you do not use a reverse-proxy). -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <link rel="stylesheet" href="./styles.css">
         <title>SoundBot</title>
-
-        <style>
-            .box {
-              width: 1420px;
-              height: 200px;
-              background-color: #5F60FF;
-            }
-          </style>
+        <link rel="stylesheet" href="general_styling.css">
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="section.css">
+        <link rel="stylesheet" href="infosection.css">
+        
     </head>
-    <body style="background-color: rgb(46, 47, 119);">
-      <nav>
-        <ul>
-          <li><img src="chatbotIconRoundV2.png" alt="Logo" class="icon"></li>
-          <li><img src="bannerFrei.png" alt="Logo" class="banner"></li>
-          <li><a href="https://github.com/ID-Start-Winter22/SoundBot/wiki" target="_blank">GitHub</a> </li>
-        </ul>
-      </nav>
-        <div 
+    <body>
+      <header>
+          <div class="header_text">
+              <nav>
+                  <ul>
+                      <li><a href="http://localhost:8000/frontend/">SoundBot</a></li>
+                      <li><a href="https://github.com/ID-Start-Winter22/SoundBot/"target="_blank">GitHub</a></li>
+                      <li><a href="https://developer.spotify.com/"target="_blank">API</a></li>
+                      <li><a href="#infosection">Infos</a></li>
+                  </ul>
+              </nav>
+              </div>
+  
+      </header>
+        <mainsection>
+          <div class="icon">
+            <img src="images/chatbotIconRoundV2.png" alt="">
+          </div>
+          <div class="textbox">
+              <h1>SoundBot</h1>
+                <!-- <p class="subhadding" ><br>Der SoundBot ist ein Bot der dir hilft deinen Musikalischen Horizont zu erweitern. 
+                Wenn du ihm einen Artist oder Song vorschlägst, der dir gefällt, kann er dir Artists oder Songs liefern, <br>die dir auch gefallen könnten. <br>
+                So kannst du dich ganz auf die Musik konzentrieren und der SoundBot übernimmt die Recherche. <br>
+                Also lets goo…! 🤘</div> -->
+                <p class="subhadding" ><br>"👋 Hey, ich bin's der SoundBot, ein Bot der dir hilft deinen musikalischen Horizont zu erweitern. <br>
+                    Wenn du mir einen Song oder Artest vorschlägst, der dir gefällt, kann ich dir andere Songs oder Artists liefern, <br>die dir sicher auch gefallen werden. <br>
+                    So kannst du dich auf die Musik konzentrieren und ich übernehme die Recherche. <br>Also lass uns Starten…! 🤘"</div>
+        </mainsection>
+        <infosection>
+            <div id="infosection"class="infobox">
+                <h2><br>Infos...</h2>
+                <h3><br><br>Was kann der Bot aktuell? ✅</h3>
+                <p class="subhadding" >Wenn du dem SoundBot einen Artist gibst, der dir gefällt kann er Ähnliche Artists finden.<br> (aktuell funktionieren nur Michael Jackson, Metallica, Lorna Shore, Frost Clad)<br>
+                <h3><br><br>Was ist noch geplant? ⚙️</h3>
+                <p class="subhadding" >Wenn du dem SoundBot einen Songs gibst, der dir gefällt kann er Ähnliche Songs finden.<br>
+                <h3><br><br>Was kann der Bot nicht? 🚫</h3>
+                <p class="subhadding" >Der Bot kann nicht auf deinen Spotify Account zugreifen. <br>Auch das abspielen von Songs ist nicht möglich.
+                <h3><br><br>API 🔄</h3>
+                <p class="subhadding" >Unser Bot nutzt die Spotify API. <br>
+                <a href="https://developer.spotify.com/" target="_blank">Spotify API</a></li>
+                <h3><br><br>Team 👥</h3>
+                <p class="subhadding">Wir sind Informatik & Design Studenten an der Hochschule München. <br>Im Rahmen unseres Projektmoduls bauen wir einen Chatbot, für den Anwendungsbereich des Bots gibt es keine Einschränkungen. <br>Der Entstehungsprozess beinhaltet insgesamt 3 Sprints. Die Projektzeit beträgt 3 Monate und endet im Januar 2023.<br>
+                <p class="subhadding"><br>Wir sind
+                <a href="https://github.com/leostraub" target="_blank">Leonhard Straub</a></li> &
+                <a href="https://github.com/SchlechtePoesieIstProgramm" target="_blank">Samuel Leu</a></li>
+                <p class="subhadding"><br><br>
+            </ul>
+    
+            </div>
+        </infosection>
+        <footer></footer>
+        <chat>                
+            <div 
             id="rasa-chat-widget" 
             data-websocket-url="http://localhost:5005/"  
-            data-height=600
+            data-height=550
             data-avatar-url="./iconImChat.png"
             data-avatar-background="#FFFFFF"
             data-primary="#5F60FF"
             data-default-open="true"
             data-primary-highlight="##c4d32b">
-        </div>
-        <script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
-        <div class="box">
-          <!-- <img src="./chatbotIconRoundV2.png" class="icon"/>
-          <img src="./bannerFrei.png" class="banner"/> -->
-        </div>
-    </body>
-    </html>
+            </div>
+            <script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
+        </chat>
+
+      
+  </body>
+  </html>  
     
