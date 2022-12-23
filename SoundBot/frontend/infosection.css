@@ -18,10 +18,10 @@ infosection{
 
 .infobox a {
     /* color: var(--text-color); */
-    color: lawngreen;
+    color: var(--link-green);
     text-decoration: none;
 }
 
 .infobox a:hover {
-    color: var(--link-hover);
+    color: var(--link-pink);
 }
