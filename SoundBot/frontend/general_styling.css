@@ -2,16 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
 
 :root{
-    --main-color: #4747fe;
-    --primary-color: #2E2F76;
-    --secondary-color: #5F60FF;
-    --secondary-color-dark: #4d4dd2;
+    --background-color: #2E2F76;
+    --secondary-color: #5555e7;
+    --secondary-color-dark: #4141ae;
     --text-color: rgb(255, 255, 255);
-    --text-color-secondary: #dedede;
     --link-pink: rgb(249, 146, 234);
-    --link-green:lawngreen;
+    --link-green:rgb(128, 255, 0);
     --link: rgb(255, 255, 255);
-    
 }
 
 *{
@@ -21,7 +18,7 @@
 
 body{
     min-height: 100vh;
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
     font-family: 'Poppins', sans-serif;  
     font-size: 20px;
     color:var(--text-color);
