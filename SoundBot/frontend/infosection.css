@@ -12,8 +12,8 @@ infosection{
     height: max-content;
     padding: 10px 50px;
     border-radius: 45px;
-    /* background-color: var(--secondary-color-dark);  */
-    background-color: #4141ae;
+    background-color: var(--secondary-color-dark); 
+    /* background-color: #4141ae; */
 }
 
 .infobox a {

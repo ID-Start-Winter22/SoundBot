@@ -20,8 +20,8 @@ mainsection {
 .icon img {
     width: 100%;
     border-radius: 45px; 
-    /* background-color: var(--secondary-color-dark); */
-    background-color: #5555e7;
+    background-color: var(--secondary-color);
+    /* background-color: #5555e7; */
 }
 
 .textbox{
@@ -29,7 +29,7 @@ mainsection {
     height: 440px;
     padding: 30px 30px;
     border-radius: 45px;
-    /* background-color: var(--secondary-color-dark);  */
-    background-color: #5555e7;
+    background-color: var(--secondary-color); 
+    /* background-color: #5555e7; */
 }
 
