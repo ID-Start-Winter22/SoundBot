@@ -18,17 +18,17 @@ maxTries = 15
 alreadyRecommendedList = []
 
 def authToken():
+    """Gibt ein Token zurück"""
     #Das ist die Funktion fürs Token; hier nichts ändern
     url = "https://accounts.spotify.com/api/token"
-    client = open("client.txt", "r")
+    client = open('/chat-team-9/SoundBot/actions/client.env', 'r')
+    lines = []
     for line in client:
         line = line.removesuffix("\n")
-        if line == 1:
-            clientId = str(line)
-            print(clientId)
-        elif line == 2:
-            clientSecret = str(line)
-            print(clientSecret)
+        lines.append(line)
+
+    clientId = str(lines[0])
+    clientSecret = str(lines[1])
 
     headers = {}
     data = {}

@@ -1,3 +1,2 @@
-"ccc7b42e5a2c4b5c876ebd93641bbce6"
-
-"45ca423c757f4c69a736bbf22ae597e9"
+clientId="ccc7b42e5a2c4b5c876ebd93641bbce6"
+clientSecret="45ca423c757f4c69a736bbf22ae597e9"
