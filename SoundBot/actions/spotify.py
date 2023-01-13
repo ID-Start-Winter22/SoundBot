@@ -20,8 +20,16 @@ alreadyRecommendedList = []
 def authToken():
     #Das ist die Funktion fürs Token; hier nichts ändern
     url = "https://accounts.spotify.com/api/token"
-    clientId = "ccc7b42e5a2c4b5c876ebd93641bbce6"
-    clientSecret = "45ca423c757f4c69a736bbf22ae597e9"
+    client = open("client.txt", "r")
+    for line in client:
+        line = line.removesuffix("\n")
+        if line == 1:
+            clientId = str(line)
+            print(clientId)
+        elif line == 2:
+            clientSecret = str(line)
+            print(clientSecret)
+
     headers = {}
     data = {}
 
@@ -131,7 +139,7 @@ def getRelatedArtist(name):
     return rel_art1, rel_art2, rel_art3, rel_art4, rel_art5, rel_art6
 
 #Tests
-#print(authToken())
+print(authToken())
 #print(artistNameToId("Michael Jackson"))
 #print(getRelatedArtist("Michael Jackson"))
 #print(getRelatedArtist("Metallica"))
