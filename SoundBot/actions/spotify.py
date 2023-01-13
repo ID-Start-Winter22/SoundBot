@@ -2,6 +2,7 @@ import requests
 import json
 import base64
 import random
+import os
 
 #####res ist die Antwort die von der API zurückgegeben wird mit Hilfe von requests
 #####url ist die API-Adresse und headers sind die zusätze, die der Adresse hinzugefügt werden
@@ -21,14 +22,19 @@ def authToken():
     """Gibt ein Token zurück"""
     #Das ist die Funktion fürs Token; hier nichts ändern
     url = "https://accounts.spotify.com/api/token"
-    client = open('/chat-team-9/SoundBot/actions/client.env', 'r')
-    lines = []
-    for line in client:
-        line = line.removesuffix("\n")
-        lines.append(line)
+    # client = open('/chat-team-9/SoundBot/actions/client.txt', 'r')
+    # lines = []
+    # for line in client:
+    #     line = line.removesuffix("\n")
+    #     lines.append(line)
 
-    clientId = str(lines[0])
-    clientSecret = str(lines[1])
+    # clientId = str(lines[0])
+    # clientSecret = str(lines[1])
+
+    clientId = os.environ.get("CLIENTID")
+    clientSecret = os.environ.get("CLIENTSECRET")
+
+    print(clientId, clientSecret)
 
     headers = {}
     data = {}
