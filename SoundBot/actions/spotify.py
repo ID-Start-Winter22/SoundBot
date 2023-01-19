@@ -2,6 +2,16 @@ import requests
 import json
 import base64
 import random
+import os
+
+#####res ist die Antwort die von der API zurückgegeben wird mit Hilfe von requests
+#####url ist die API-Adresse und headers sind die zusätze, die der Adresse hinzugefügt werden
+#####.content gibt den Inhalt aus
+"""res = requests.get(url=url, headers=headers).content"""
+#####json_data ist die zu einer json-Datei umgewandelte Response
+"""json_data = json.loads(res)"""
+#####erg ist ein Auschnitt an der Stelle "erg" in json_data
+"""erg = json_data["erg"]"""
 
 #####res ist die Antwort die von der API zurückgegeben wird mit Hilfe von requests
 #####url ist die API-Adresse und headers sind die zusätze, die der Adresse hinzugefügt werden
@@ -18,10 +28,23 @@ maxTries = 15
 alreadyRecommendedList = []
 
 def authToken():
+    """Gibt ein Token zurück"""
     #Das ist die Funktion fürs Token; hier nichts ändern
     url = "https://accounts.spotify.com/api/token"
-    clientId = "ccc7b42e5a2c4b5c876ebd93641bbce6"
-    clientSecret = "45ca423c757f4c69a736bbf22ae597e9"
+    # client = open('/chat-team-9/SoundBot/actions/client.txt', 'r')
+    # lines = []
+    # for line in client:
+    #     line = line.removesuffix("\n")
+    #     lines.append(line)
+
+    # clientId = str(lines[0])
+    # clientSecret = str(lines[1])
+
+    clientId = os.environ.get("CLIENTID")
+    clientSecret = os.environ.get("CLIENTSECRET")
+
+    print(clientId, clientSecret)
+
     headers = {}
     data = {}
 
@@ -131,7 +154,7 @@ def getRelatedArtist(name):
     return rel_art1, rel_art2, rel_art3, rel_art4, rel_art5, rel_art6
 
 #Tests
-#print(authToken())
+print(authToken())
 #print(artistNameToId("Michael Jackson"))
 #print(getRelatedArtist("Michael Jackson"))
 #print(getRelatedArtist("Metallica"))
