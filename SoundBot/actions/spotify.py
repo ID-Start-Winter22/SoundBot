@@ -16,23 +16,22 @@ import os
 #Maximale Anzahl von Versuchen für das auswählen von Vorschlägen
 maxTries = 15
 #Liste mit den bereits gestellten Vorschlägen
+maxListLen = 100
 alreadyRecommendedList = []
+
+def maintain_ARL():
+    if len(alreadyRecommendedList) > maxListLen: alreadyRecommendedList.remove(alreadyRecommendedList[0])
 
 def authToken():
     """Gibt ein Token zurück"""
     #Das ist die Funktion fürs Token; hier nichts ändern
     url = "https://accounts.spotify.com/api/token"
-    # client = open('/chat-team-9/SoundBot/actions/client.txt', 'r')
-    # lines = []
-    # for line in client:
-    #     line = line.removesuffix("\n")
-    #     lines.append(line)
 
-    # clientId = str(lines[0])
-    # clientSecret = str(lines[1])
+    # clientId = os.environ.get("CLIENTID")
+    # clientSecret = os.environ.get("CLIENTSECRET")
 
-    clientId = os.environ.get("CLIENTID")
-    clientSecret = os.environ.get("CLIENTSECRET")
+    clientId="ccc7b42e5a2c4b5c876ebd93641bbce6"
+    clientSecret="45ca423c757f4c69a736bbf22ae597e9"
 
     print(clientId, clientSecret)
 
@@ -80,29 +79,42 @@ def chooseNewArt(json_data, aRL):
     #überprüft, ob es nur einen ähnlichen Artist gibt
     if len(json_data["artists"])-1 == 0:
         rel_art = json_data["artists"][0]["name"]
+        rel_art_img = json_data["artists"][0]["images"][0]["url"]
+        rel_art_link = json_data["artists"][0]["external_urls"]["spotify"]
+        rel_art = (rel_art_name, rel_art_img, rel_art_link)
         return rel_art
     #überprüft, ob es keine ähnlichen Artists gibt
     elif len(json_data["artists"])-1 < 0:
-        rel_art = "No similar"
+        rel_art = ("No similar", "", "")
         return rel_art
 
+    r = random.randint(0, len(json_data["artists"])-1)
     #wählt einen zufälligen Artist aus json_data["artists"] aus und speichert den Namen in rel_art
-    rel_art = json_data["artists"][random.randint(0, len(json_data["artists"])-1)]["name"]
+    rel_art_name = json_data["artists"][r]["name"]
+    rel_art_img = json_data["artists"][r]["images"][0]["url"]
+    rel_art_link = json_data["artists"][r]["external_urls"]["spotify"]
+    rel_art = (rel_art_name, rel_art_img, rel_art_link)
     #überprüft, ob rel_art schon vorgeschlagen wurde
-    alreadyRec = alreadyRecommended(aRL, rel_art)
+    alreadyRec = alreadyRecommended(aRL, rel_art[0])
     #wenn das der Fall ist, wird neu ausgewählt, bis ein Artist gefunden wurde, der noch nicht vorgeschlagen wurde oder die maximale Anzahl an versuchen überschritten wurde
     while alreadyRec:
-        rel_art = json_data["artists"][random.randint(0, len(json_data["artists"])-1)]["name"]
+        r = random.randint(0, len(json_data["artists"])-1)
+        rel_art_name = json_data["artists"][r]["name"]
+        rel_art_img = json_data["artists"][r]["external_urls"]["images"][0]["url"]
+        rel_art_link = json_data["artists"][r]["external_urls"]["spotify"]
         alreadyRec = alreadyRecommended(aRL, rel_art)
         if stop == maxTries:
             alreadyRec = False
             rel_art = ""
         stop += 1
+
+    rel_art = (rel_art_name, rel_art_img, rel_art_link)
     
     return rel_art
 
 def getRelatedArtist(name):
     """Sucht nach ähnlichen Artists zu dem gegebenen Namen"""
+    maintain_ARL()
     token = authToken()
     id = artistNameToId(name)
     if id == "Not Found":
@@ -145,10 +157,27 @@ def getRelatedArtist(name):
     return rel_art1, rel_art2, rel_art3, rel_art4, rel_art5, rel_art6
 
 #Tests
-print(authToken())
+#print(authToken())
 #print(artistNameToId("Michael Jackson"))
-#print(getRelatedArtist("Michael Jackson"))
-#print(getRelatedArtist("Metallica"))
-#print(getRelatedArtist("Lorna Shore"))
-#print(getRelatedArtist("Frost Clad"))
+# print(getRelatedArtist("Michael Jackson"))
+# print(alreadyRecommendedList)
+# print(getRelatedArtist("Metallica"))
+# print(alreadyRecommendedList)
+# print(getRelatedArtist("Lorna Shore"))
+# print(alreadyRecommendedList)
+# print(getRelatedArtist("Frost Clad"))
+# print(alreadyRecommendedList)
 #print(artistNameToId("1111111111111111"))
+
+# def request():
+#     token = authToken()
+#     id = artistNameToId("Michael Jackson")
+
+#     url = f"https://api.spotify.com/v1/artists/{id}/related-artists"
+#     headers = {"Authorization": "Bearer " + token}
+
+#     res = requests.get(url=url, headers=headers).content
+#     json_data = json.loads(res)
+
+#     return json_data["artists"][0]["external_urls"]
+#print(request())
