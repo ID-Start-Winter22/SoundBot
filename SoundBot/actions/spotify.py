@@ -16,7 +16,11 @@ import os
 #Maximale Anzahl von Versuchen für das auswählen von Vorschlägen
 maxTries = 15
 #Liste mit den bereits gestellten Vorschlägen
+maxListLen = 100
 alreadyRecommendedList = []
+
+def maintain_ARL():
+    if len(alreadyRecommendedList) > maxListLen: alreadyRecommendedList.remove(alreadyRecommendedList[0])
 
 def authToken():
     """Gibt ein Token zurück"""
@@ -110,6 +114,7 @@ def chooseNewArt(json_data, aRL):
 
 def getRelatedArtist(name):
     """Sucht nach ähnlichen Artists zu dem gegebenen Namen"""
+    maintain_ARL()
     token = authToken()
     id = artistNameToId(name)
     if id == "Not Found":
@@ -154,21 +159,25 @@ def getRelatedArtist(name):
 #Tests
 #print(authToken())
 #print(artistNameToId("Michael Jackson"))
-print(getRelatedArtist("Michael Jackson"))
-#print(getRelatedArtist("Metallica"))
-#print(getRelatedArtist("Lorna Shore"))
-#print(getRelatedArtist("Frost Clad"))
+# print(getRelatedArtist("Michael Jackson"))
+# print(alreadyRecommendedList)
+# print(getRelatedArtist("Metallica"))
+# print(alreadyRecommendedList)
+# print(getRelatedArtist("Lorna Shore"))
+# print(alreadyRecommendedList)
+# print(getRelatedArtist("Frost Clad"))
+# print(alreadyRecommendedList)
 #print(artistNameToId("1111111111111111"))
 
-def request():
-    token = authToken()
-    id = artistNameToId("Michael Jackson")
+# def request():
+#     token = authToken()
+#     id = artistNameToId("Michael Jackson")
 
-    url = f"https://api.spotify.com/v1/artists/{id}/related-artists"
-    headers = {"Authorization": "Bearer " + token}
+#     url = f"https://api.spotify.com/v1/artists/{id}/related-artists"
+#     headers = {"Authorization": "Bearer " + token}
 
-    res = requests.get(url=url, headers=headers).content
-    json_data = json.loads(res)
+#     res = requests.get(url=url, headers=headers).content
+#     json_data = json.loads(res)
 
-    return json_data["artists"][0]["external_urls"]
+#     return json_data["artists"][0]["external_urls"]
 #print(request())
