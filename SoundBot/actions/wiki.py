@@ -31,4 +31,4 @@ def getInfo(name: str):
 
     return info
 
-print(getInfo("Michael Jackson"))
+#print(getInfo("Michael Jackson"))
