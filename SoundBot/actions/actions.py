@@ -73,7 +73,7 @@ class ActionTrack(Action):
             dispatcher.utter_message("Du hast doch noch garnichts eingegeben")
         else:
             #Ausgabe der Antwort, wenn die Anfrage erfolgreich war
-            dispatcher.utter_message("Hier gibt es noch nichts zu sehen")
+            dispatcher.utter_message("Hier gibt es noch nichts zu sehen.\n\n\nIst halt nur ein Prototyp. In der Vollversion wäre das hier auch verfügbar.")
 
         return []
 
