@@ -28,21 +28,6 @@ class ActionArtist(Action):
         else:
             result1, result2, result3, result4, result5, result6 = spotify.getRelatedArtist(search)
 
-            #--------------------------------------------
-            #Antwort bei erfolgreicher Anfrage
-            answer = f"Ich hätte die hier für dich gefunden:\n{result1}"
-            if result2 != "":
-                answer = f"Ich hätte die hier für dich gefunden:\n{result1}\n{result2}"
-            if result3 != "":
-                answer = f"Ich hätte die hier für dich gefunden:\n{result1}\n{result2}\n{result3}"
-            if result4 != "":
-                answer = f"Ich hätte die hier für dich gefunden:\n{result1}\n{result2}\n{result3}\n{result4}"
-            if result5 != "":
-                answer = f"Ich hätte die hier für dich gefunden:\n{result1}\n{result2}\n{result3}\n{result4}\n{result5}"
-            if result6 != "":
-                answer = f"Ich hätte die hier für dich gefunden:\n{result1}\n{result2}\n{result3}\n{result4}\n{result5}\n{result6}"
-            #--------------------------------------------
-
             if "error" in result1:
                 #Fehlermeldung, wenn Artist nicht existiert
                 dispatcher.utter_message("Wow! Nicht einmal ich kenne den Artist :o Versuche bitte einen anderen Namen.")
@@ -50,6 +35,20 @@ class ActionArtist(Action):
                 #Fehlermeldung, wenn es nichts Ähnliches zur Suche gibt
                 dispatcher.utter_message("Ich kenne leider nichts ähnliches dazu") 
             else:
+                #--------------------------------------------
+                #Antwort bei erfolgreicher Anfrage
+                answer = f"Ich hätte das hier für dich gefunden:\n{result1[0]} {result1[2]} {result1[1]}"
+                if result2 != "":
+                    answer = f"Ich hätte die hier für dich gefunden:\n{result1[0]} {result1[2]} {result1[1]}\n{result2[0]} {result2[2]} {result2[1]}"
+                if result3 != "":
+                    answer = f"Ich hätte die hier für dich gefunden:\n{result1[0]} {result1[2]} {result1[1]}\n{result2[0]} {result2[2]} {result2[1]}\n{result3[0]} {result3[2]} {result3[1]}"
+                if result4 != "":
+                    answer = f"Ich hätte die hier für dich gefunden:\n{result1[0]} {result1[2]} {result1[1]}\n{result2[0]} {result2[2]} {result2[1]}\n{result3[0]} {result3[2]} {result3[1]}\n{result4[0]} {result4[2]} {result4[1]}"
+                if result5 != "":
+                    answer = f"Ich hätte die hier für dich gefunden:\n{result1[0]} {result1[2]} {result1[1]}\n{result2[0]} {result2[2]} {result2[1]}\n{result3[0]} {result3[2]} {result3[1]}\n{result4[0]} {result4[2]} {result4[1]}\n{result5[0]} {result5[2]} {result5[1]}"
+                if result6 != "":
+                    answer = f"Ich hätte die hier für dich gefunden:\n{result1[0]} {result1[2]} {result1[1]}\n{result2[0]} {result2[2]} {result2[1]}\n{result3[0]} {result3[2]} {result3[1]}\n{result4[0]} {result4[2]} {result4[1]}\n{result5[0]} {result5[2]} {result5[1]}\n{result6[0]} {result6[2]} {result6[1]}"
+                #--------------------------------------------
                 #Ausgabe der Antwort, wenn die Anfrage erfolgreich war
                 dispatcher.utter_message(answer)
 
@@ -74,7 +73,7 @@ class ActionTrack(Action):
             dispatcher.utter_message("Du hast doch noch garnichts eingegeben")
         else:
             #Ausgabe der Antwort, wenn die Anfrage erfolgreich war
-            dispatcher.utter_message("Hier gibt es noch nichts zu sehen")
+            dispatcher.utter_message("Hier gibt es noch nichts zu sehen.\n\n\nIst halt nur ein Prototyp. In der Vollversion wäre das hier auch verfügbar.")
 
         return []
 
@@ -97,7 +96,10 @@ class ActionInfo(Action):
             dispatcher.utter_message("Du hast doch noch garnichts eingegeben")
         else:
             result = wiki.getInfo(search)
-            #Ausgabe der Antwort, wenn die Anfrage erfolgreich war
-            dispatcher.utter_message(result)
+            if "error" in result:
+                dispatcher.utter_message("Soweit reicht mein Wissensstand leider auch nicht.")
+            else:
+                #Ausgabe der Antwort, wenn die Anfrage erfolgreich war
+                dispatcher.utter_message(result)
 
         return []

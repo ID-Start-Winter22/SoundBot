@@ -1,4 +1,18 @@
 {
+  "ask_for_back": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4,
+    "confused_with": {}
+  },
+  "type_info": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
   "goodbye": {
     "precision": 1.0,
     "recall": 1.0,
@@ -6,11 +20,11 @@
     "support": 3,
     "confused_with": {}
   },
-  "type_artist": {
+  "type_song": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 6,
+    "support": 4,
     "confused_with": {}
   },
   "ask_for_info": {
@@ -20,37 +34,7 @@
     "support": 3,
     "confused_with": {}
   },
-  "short": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 5,
-    "confused_with": {}
-  },
-  "ask_for_similar_artist": {
-    "precision": 1.0,
-    "recall": 0.8571428571428571,
-    "f1-score": 0.923076923076923,
-    "support": 7,
-    "confused_with": {
-      "ask_for_info": 1
-    }
-  },
-  "ask_for_similar_track": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 3,
-    "confused_with": {}
-  },
-  "greet": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 4,
-    "confused_with": {}
-  },
-  "ask_for_use": {
+  "ask": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
@@ -64,25 +48,25 @@
     "support": 4,
     "confused_with": {}
   },
-  "type_song": {
+  "type_artist": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 4,
+    "support": 6,
     "confused_with": {}
   },
-  "ask_for_back": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 4,
-    "confused_with": {}
-  },
-  "long": {
+  "short": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 5,
+    "confused_with": {}
+  },
+  "greet": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4,
     "confused_with": {}
   },
   "deny": {
@@ -92,19 +76,35 @@
     "support": 3,
     "confused_with": {}
   },
-  "type_info": {
+  "long": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "ask_for_use": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 2,
     "confused_with": {}
   },
-  "ask": {
+  "ask_for_similar_track": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 2,
+    "support": 3,
     "confused_with": {}
+  },
+  "ask_for_similar_artist": {
+    "precision": 1.0,
+    "recall": 0.8571428571428571,
+    "f1-score": 0.923076923076923,
+    "support": 7,
+    "confused_with": {
+      "ask_for_info": 1
+    }
   },
   "accuracy": 0.9824561403508771,
   "macro avg": {
