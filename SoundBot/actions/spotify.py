@@ -13,6 +13,15 @@ import os
 #####erg ist ein Auschnitt an der Stelle "erg" in json_data
 """erg = json_data["erg"]"""
 
+#####res ist die Antwort die von der API zurückgegeben wird mit Hilfe von requests
+#####url ist die API-Adresse und headers sind die zusätze, die der Adresse hinzugefügt werden
+#####.content gibt den Inhalt aus
+"""res = requests.get(url=url, headers=headers).content"""
+#####json_data ist die zu einer json-Datei umgewandelte Response
+"""json_data = json.loads(res)"""
+#####erg ist ein Auschnitt an der Stelle "erg" in json_data
+"""erg = json_data["erg"]"""
+
 #Maximale Anzahl von Versuchen für das auswählen von Vorschlägen
 maxTries = 15
 #Liste mit den bereits gestellten Vorschlägen

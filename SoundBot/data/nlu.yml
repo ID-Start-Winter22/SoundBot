@@ -10,12 +10,55 @@ nlu:
     - ["111111111111111111"](search)
     - ["a-zA-Z0-9"](search)
     - ["[a-zA-Z]"](search)
+    - ["Ed Sheeran"](search)
+    - ["Charlie Puth"](search)
+    - ["Harry Styles"](search)
+    - ["Anirudh Ravichander"](search)
+    - ["David Guetta"](search)
+    - ["Eminem"](search)
+    - ["The Weeknd"](search)
+    - ["Billie Eilish"](search)
+    - ["Rihanna"](search)
+    - ["Shakira"](search)
+    - ["Travis Scott"](search)
+    - ["Drake"](search)
+    - ["Taylor Swift"](search)
+    - ["Justin Bieber"](search)
+    - ["Ariana Grande"](search)
+    - ["Dua Lipa"](search)
+    - ["Bruno Mars"](search)
+    - ["Adele"](search)
+    - ["Beyonce"](search)
+    - ["Lil Nas X"](search)
 
 - intent: ask_for_similar_track
   examples: |
-    - Gibts was Ähnliches zu [Beat It](search)?
-    - Ähnliches zu [Beat It](search)
-    - [Beat It](search)
+    - Gibts was Ähnliches zu ["Beat It"](search)?
+    - Ähnliches zu ["Beat It"](search)
+    - ["Beat It"](search)
+    - ["Attention"](search)
+    - ["Thriller"](search)
+    - ["Dirty Diana"](search)
+    - ["Unholy"](search)
+    - ["Shivers"](search)
+    - ["Kill Bill"](search)
+    - ["Calm Down"](search)
+    - ["As it was"](search)
+    - ["Made you look"](search)
+    - ["Golden Hour"](search)
+    - ["Bad Habit"](search)
+    - ["Stay"](search)
+    - ["Perfect"](search)
+    - ["Bad Habits"](search)
+    - ["Starboy"](search)
+    - ["Blind"](search)
+    - ["Easy on me"](search)
+    - ["Shape of you"](search)
+    - ["Dream on"](search)
+    - ["Happier than ever"](search)
+    - ["Billie Jean"](search)
+    - ["Arabic Kuthu"](search)
+    - ["Lokiverse"](search)
 
 - intent: ask_for_info
   examples: |
@@ -29,12 +72,15 @@ nlu:
     - Servus
     - Hallo
     - hallo
+    - hey 
 
 - intent: goodbye
   examples: |
     - Tschüss
     - Auf wiedersehen
     - Bye
+    - Bis zum nächsten Mal
+    - Ciao
 
 - intent: ask_for_back
   examples: |
@@ -50,6 +96,9 @@ nlu:
     - Ausführlich bitte
     - Die Lange
     - lang
+    - Vollversion bitte
+    - die ganze Geschichte
+    - ganze Version
 
 - intent: short
   examples: |
@@ -58,6 +107,7 @@ nlu:
     - Kurz bitte
     - Die Kurze
     - kurz
+    - die kompakte
 
 - intent: ask_for_use
   examples: |
@@ -67,7 +117,7 @@ nlu:
 - intent: ask
   examples: |
     - Zeig mir etwas Neues
-    - Was Neues
+    - Was Neues 
 
 - intent: type_artist
   examples: |
@@ -96,9 +146,14 @@ nlu:
     - J
     - Y
     - Gut
+    - Yes
+    - Ya
+    - Yeah
 
 - intent: deny
   examples: |
     - Nein
     - N
     - Schlecht
+    - Ne
+    - Nö
