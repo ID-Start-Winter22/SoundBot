@@ -96,7 +96,10 @@ class ActionInfo(Action):
             dispatcher.utter_message("Du hast doch noch garnichts eingegeben")
         else:
             result = wiki.getInfo(search)
-            #Ausgabe der Antwort, wenn die Anfrage erfolgreich war
-            dispatcher.utter_message(result)
+            if "error" in result:
+                dispatcher.utter_message("Soweit reicht mein Wissensstand leider auch nicht.")
+            else:
+                #Ausgabe der Antwort, wenn die Anfrage erfolgreich war
+                dispatcher.utter_message(result)
 
         return []

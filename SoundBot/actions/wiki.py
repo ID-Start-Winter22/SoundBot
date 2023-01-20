@@ -11,9 +11,12 @@ def joinParts(parts: list) -> str:
 def getInfo(name: str):
     """gibt Infos zu einem gegebenen Namen aus"""
     #res, wie in spotify.py erklärt
-    url = f"https://de.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&exintro=&titles={name}"
-    res = requests.get(url=url).content
-    json_data = json.loads(res)
+    try:
+        url = f"https://de.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&exintro=&titles={name}"
+        res = requests.get(url=url).content
+        json_data = json.loads(res)
+    except:
+        return "error"
 
     #filtern nach dem Infotext
     page = json_data["query"]["pages"]
